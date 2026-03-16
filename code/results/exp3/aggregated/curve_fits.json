@@ -1,0 +1,978 @@
+{
+  "experiment": "exp3",
+  "fits": {
+    "accuracy_classes_2": {
+      "func_type": "log",
+      "params": [
+        0.0075247459219343876,
+        0.9407999455199172
+      ],
+      "r_squared": 0.9882134061732716,
+      "equation": "y = 0.0075\u00b7log(x) + 0.9408",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 2
+    },
+    "accuracy_classes_3": {
+      "func_type": "log",
+      "params": [
+        0.005339995082579533,
+        0.9534384580396431
+      ],
+      "r_squared": 0.978643542575418,
+      "equation": "y = 0.0053\u00b7log(x) + 0.9534",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 3
+    },
+    "accuracy_classes_4": {
+      "func_type": "log",
+      "params": [
+        0.006372940847746844,
+        0.9549308086186278
+      ],
+      "r_squared": 0.9708632996662291,
+      "equation": "y = 0.0064\u00b7log(x) + 0.9549",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 4
+    },
+    "accuracy_classes_5": {
+      "func_type": "log",
+      "params": [
+        0.008882980576987632,
+        0.9278361609907289
+      ],
+      "r_squared": 0.9959515773635274,
+      "equation": "y = 0.0089\u00b7log(x) + 0.9278",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 5
+    },
+    "accuracy_classes_6": {
+      "func_type": "log",
+      "params": [
+        0.017153211931123284,
+        0.8556936842476525
+      ],
+      "r_squared": 0.9958311600121711,
+      "equation": "y = 0.0172\u00b7log(x) + 0.8557",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 6
+    },
+    "accuracy_classes_7": {
+      "func_type": "log",
+      "params": [
+        0.014375235799568627,
+        0.8811234185330175
+      ],
+      "r_squared": 0.9936180108487797,
+      "equation": "y = 0.0144\u00b7log(x) + 0.8811",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 7
+    },
+    "accuracy_classes_8": {
+      "func_type": "log",
+      "params": [
+        0.015305738861226636,
+        0.8727613144116163
+      ],
+      "r_squared": 0.9956404874156173,
+      "equation": "y = 0.0153\u00b7log(x) + 0.8728",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 8
+    },
+    "accuracy_classes_9": {
+      "func_type": "log",
+      "params": [
+        0.020303615425385314,
+        0.8299711127099492
+      ],
+      "r_squared": 0.9884667468296274,
+      "equation": "y = 0.0203\u00b7log(x) + 0.8300",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 9
+    },
+    "accuracy_classes_10": {
+      "func_type": "log",
+      "params": [
+        0.018229005443931648,
+        0.8351223219043017
+      ],
+      "r_squared": 0.9769361900800079,
+      "equation": "y = 0.0182\u00b7log(x) + 0.8351",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 10
+    },
+    "balanced_accuracy_classes_2": {
+      "func_type": "log",
+      "params": [
+        0.0075247459219343876,
+        0.9407999455199172
+      ],
+      "r_squared": 0.9882134061732716,
+      "equation": "y = 0.0075\u00b7log(x) + 0.9408",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 2
+    },
+    "balanced_accuracy_classes_3": {
+      "func_type": "log",
+      "params": [
+        0.00533999508257952,
+        0.9534384580396432
+      ],
+      "r_squared": 0.9786435425754161,
+      "equation": "y = 0.0053\u00b7log(x) + 0.9534",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 3
+    },
+    "balanced_accuracy_classes_4": {
+      "func_type": "log",
+      "params": [
+        0.006372940847746844,
+        0.9549308086186278
+      ],
+      "r_squared": 0.9708632996662291,
+      "equation": "y = 0.0064\u00b7log(x) + 0.9549",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 4
+    },
+    "balanced_accuracy_classes_5": {
+      "func_type": "log",
+      "params": [
+        0.008882980576987637,
+        0.9278361609907287
+      ],
+      "r_squared": 0.9959515773635274,
+      "equation": "y = 0.0089\u00b7log(x) + 0.9278",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 5
+    },
+    "balanced_accuracy_classes_6": {
+      "func_type": "log",
+      "params": [
+        0.017153211949467572,
+        0.8556936841777052
+      ],
+      "r_squared": 0.995831160012171,
+      "equation": "y = 0.0172\u00b7log(x) + 0.8557",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 6
+    },
+    "balanced_accuracy_classes_7": {
+      "func_type": "log",
+      "params": [
+        0.01437523579956863,
+        0.8811234185330173
+      ],
+      "r_squared": 0.9936180108487795,
+      "equation": "y = 0.0144\u00b7log(x) + 0.8811",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 7
+    },
+    "balanced_accuracy_classes_8": {
+      "func_type": "log",
+      "params": [
+        0.015305738861226636,
+        0.8727613144116163
+      ],
+      "r_squared": 0.9956404874156173,
+      "equation": "y = 0.0153\u00b7log(x) + 0.8728",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 8
+    },
+    "balanced_accuracy_classes_9": {
+      "func_type": "log",
+      "params": [
+        0.020303615425385314,
+        0.8299711127099492
+      ],
+      "r_squared": 0.9884667468296274,
+      "equation": "y = 0.0203\u00b7log(x) + 0.8300",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 9
+    },
+    "balanced_accuracy_classes_10": {
+      "func_type": "log",
+      "params": [
+        0.018229005676906367,
+        0.8351223210111356
+      ],
+      "r_squared": 0.9769361900800083,
+      "equation": "y = 0.0182\u00b7log(x) + 0.8351",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 10
+    },
+    "f1_macro_classes_2": {
+      "func_type": "log",
+      "params": [
+        0.007537873693084596,
+        0.940736618934664
+      ],
+      "r_squared": 0.9881301845227972,
+      "equation": "y = 0.0075\u00b7log(x) + 0.9407",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 2
+    },
+    "f1_macro_classes_3": {
+      "func_type": "log",
+      "params": [
+        0.005373215338315476,
+        0.9532544327953913
+      ],
+      "r_squared": 0.9778246063769289,
+      "equation": "y = 0.0054\u00b7log(x) + 0.9533",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 3
+    },
+    "f1_macro_classes_4": {
+      "func_type": "log",
+      "params": [
+        0.006345719782321945,
+        0.955052632748101
+      ],
+      "r_squared": 0.9709440475700066,
+      "equation": "y = 0.0063\u00b7log(x) + 0.9551",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 4
+    },
+    "f1_macro_classes_5": {
+      "func_type": "log",
+      "params": [
+        0.008967963056503455,
+        0.9274120888896529
+      ],
+      "r_squared": 0.996278663956213,
+      "equation": "y = 0.0090\u00b7log(x) + 0.9274",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 5
+    },
+    "f1_macro_classes_6": {
+      "func_type": "log",
+      "params": [
+        0.01720034891246548,
+        0.8553471185320063
+      ],
+      "r_squared": 0.9956130921714444,
+      "equation": "y = 0.0172\u00b7log(x) + 0.8553",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 6
+    },
+    "f1_macro_classes_7": {
+      "func_type": "log",
+      "params": [
+        0.014312665428037994,
+        0.881191765638805
+      ],
+      "r_squared": 0.9939032922160123,
+      "equation": "y = 0.0143\u00b7log(x) + 0.8812",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 7
+    },
+    "f1_macro_classes_8": {
+      "func_type": "log",
+      "params": [
+        0.015388025352436814,
+        0.8723344506431948
+      ],
+      "r_squared": 0.9953932220599353,
+      "equation": "y = 0.0154\u00b7log(x) + 0.8723",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 8
+    },
+    "f1_macro_classes_9": {
+      "func_type": "log",
+      "params": [
+        0.020233955107379523,
+        0.8299447500499944
+      ],
+      "r_squared": 0.9887491095494538,
+      "equation": "y = 0.0202\u00b7log(x) + 0.8299",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 9
+    },
+    "f1_macro_classes_10": {
+      "func_type": "log",
+      "params": [
+        0.01844471335660444,
+        0.8339088613350687
+      ],
+      "r_squared": 0.9763152869396159,
+      "equation": "y = 0.0184\u00b7log(x) + 0.8339",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 10
+    },
+    "auroc_macro_classes_2": {
+      "func_type": "log",
+      "params": [
+        0.0027886783515854415,
+        0.981892725962889
+      ],
+      "r_squared": 0.9788133132200196,
+      "equation": "y = 0.0028\u00b7log(x) + 0.9819",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 2
+    },
+    "auroc_macro_classes_3": {
+      "func_type": "log",
+      "params": [
+        0.0015723729045931459,
+        0.9897546360156195
+      ],
+      "r_squared": 0.9791918676844147,
+      "equation": "y = 0.0016\u00b7log(x) + 0.9898",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 3
+    },
+    "auroc_macro_classes_4": {
+      "func_type": "log",
+      "params": [
+        0.0008936508271180722,
+        0.994908113014897
+      ],
+      "r_squared": 0.9585037404499754,
+      "equation": "y = 0.0009\u00b7log(x) + 0.9949",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 4
+    },
+    "auroc_macro_classes_5": {
+      "func_type": "log",
+      "params": [
+        0.001263765571064749,
+        0.9917822643769257
+      ],
+      "r_squared": 0.9671718006806335,
+      "equation": "y = 0.0013\u00b7log(x) + 0.9918",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 5
+    },
+    "auroc_macro_classes_6": {
+      "func_type": "log",
+      "params": [
+        0.003062292681766478,
+        0.9804602751121362
+      ],
+      "r_squared": 0.9914029265065961,
+      "equation": "y = 0.0031\u00b7log(x) + 0.9805",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 6
+    },
+    "auroc_macro_classes_7": {
+      "func_type": "log",
+      "params": [
+        0.0021233221504547784,
+        0.9865208368806129
+      ],
+      "r_squared": 0.9887878464965294,
+      "equation": "y = 0.0021\u00b7log(x) + 0.9865",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 7
+    },
+    "auroc_macro_classes_8": {
+      "func_type": "log",
+      "params": [
+        0.0018668280955426299,
+        0.9881374738159252
+      ],
+      "r_squared": 0.9876579711476516,
+      "equation": "y = 0.0019\u00b7log(x) + 0.9881",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 8
+    },
+    "auroc_macro_classes_9": {
+      "func_type": "log",
+      "params": [
+        0.002547626958377025,
+        0.9835750141936361
+      ],
+      "r_squared": 0.9837780114167567,
+      "equation": "y = 0.0025\u00b7log(x) + 0.9836",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 9
+    },
+    "auroc_macro_classes_10": {
+      "func_type": "log",
+      "params": [
+        0.0023099816482463047,
+        0.9847215905510678
+      ],
+      "r_squared": 0.987210103272652,
+      "equation": "y = 0.0023\u00b7log(x) + 0.9847",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 10
+    },
+    "auprc_macro_classes_2": {
+      "func_type": "log",
+      "params": [
+        0.0027946991492760974,
+        0.9819709138114772
+      ],
+      "r_squared": 0.979950034625162,
+      "equation": "y = 0.0028\u00b7log(x) + 0.9820",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 2
+    },
+    "auprc_macro_classes_3": {
+      "func_type": "log",
+      "params": [
+        0.002986982139625814,
+        0.9805270461364489
+      ],
+      "r_squared": 0.9756766187220343,
+      "equation": "y = 0.0030\u00b7log(x) + 0.9805",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 3
+    },
+    "auprc_macro_classes_4": {
+      "func_type": "log",
+      "params": [
+        0.0024645025298186,
+        0.9859971992152163
+      ],
+      "r_squared": 0.9576628861337588,
+      "equation": "y = 0.0025\u00b7log(x) + 0.9860",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 4
+    },
+    "auprc_macro_classes_5": {
+      "func_type": "log",
+      "params": [
+        0.004000473987355726,
+        0.9730559569361374
+      ],
+      "r_squared": 0.9754745523504176,
+      "equation": "y = 0.0040\u00b7log(x) + 0.9731",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 5
+    },
+    "auprc_macro_classes_6": {
+      "func_type": "log",
+      "params": [
+        0.011968717387664158,
+        0.9221558181229852
+      ],
+      "r_squared": 0.9915613658546691,
+      "equation": "y = 0.0120\u00b7log(x) + 0.9222",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 6
+    },
+    "auprc_macro_classes_7": {
+      "func_type": "log",
+      "params": [
+        0.009243680126880857,
+        0.9394256719075896
+      ],
+      "r_squared": 0.9885291089043227,
+      "equation": "y = 0.0092\u00b7log(x) + 0.9394",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 7
+    },
+    "auprc_macro_classes_8": {
+      "func_type": "log",
+      "params": [
+        0.009974582634870072,
+        0.9353351536031614
+      ],
+      "r_squared": 0.9878338101205824,
+      "equation": "y = 0.0100\u00b7log(x) + 0.9353",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 8
+    },
+    "auprc_macro_classes_9": {
+      "func_type": "log",
+      "params": [
+        0.014361280281412293,
+        0.9043681716720652
+      ],
+      "r_squared": 0.9873331182602448,
+      "equation": "y = 0.0144\u00b7log(x) + 0.9044",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 9
+    },
+    "auprc_macro_classes_10": {
+      "func_type": "log",
+      "params": [
+        0.014314299081074084,
+        0.9020460776625784
+      ],
+      "r_squared": 0.9873525224366031,
+      "equation": "y = 0.0143\u00b7log(x) + 0.9020",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 10
+    },
+    "mcc_classes_2": {
+      "func_type": "log",
+      "params": [
+        0.01487628395444523,
+        0.882517864974626
+      ],
+      "r_squared": 0.9885849044332475,
+      "equation": "y = 0.0149\u00b7log(x) + 0.8825",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 2
+    },
+    "mcc_classes_3": {
+      "func_type": "log",
+      "params": [
+        0.007889795874137842,
+        0.9307842542084543
+      ],
+      "r_squared": 0.9800205237282723,
+      "equation": "y = 0.0079\u00b7log(x) + 0.9308",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 3
+    },
+    "mcc_classes_4": {
+      "func_type": "log",
+      "params": [
+        0.0084405405112682,
+        0.9401745261824228
+      ],
+      "r_squared": 0.9716277362576119,
+      "equation": "y = 0.0084\u00b7log(x) + 0.9402",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 4
+    },
+    "mcc_classes_5": {
+      "func_type": "log",
+      "params": [
+        0.011063714812945394,
+        0.9100671432917798
+      ],
+      "r_squared": 0.9957221082216922,
+      "equation": "y = 0.0111\u00b7log(x) + 0.9101",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 5
+    },
+    "mcc_classes_6": {
+      "func_type": "log",
+      "params": [
+        0.020372283773418567,
+        0.8278909491142062
+      ],
+      "r_squared": 0.9960063480479777,
+      "equation": "y = 0.0204\u00b7log(x) + 0.8279",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 6
+    },
+    "mcc_classes_7": {
+      "func_type": "log",
+      "params": [
+        0.016674407462288026,
+        0.8618486589383977
+      ],
+      "r_squared": 0.9935383634887107,
+      "equation": "y = 0.0167\u00b7log(x) + 0.8618",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 7
+    },
+    "mcc_classes_8": {
+      "func_type": "log",
+      "params": [
+        0.017392819078225534,
+        0.8551235554687705
+      ],
+      "r_squared": 0.9957512242728433,
+      "equation": "y = 0.0174\u00b7log(x) + 0.8551",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 8
+    },
+    "mcc_classes_9": {
+      "func_type": "log",
+      "params": [
+        0.02264973014923848,
+        0.8096783098221664
+      ],
+      "r_squared": 0.9887384005298016,
+      "equation": "y = 0.0226\u00b7log(x) + 0.8097",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 9
+    },
+    "mcc_classes_10": {
+      "func_type": "log",
+      "params": [
+        0.02017086657882335,
+        0.8173273945754262
+      ],
+      "r_squared": 0.9774318659834923,
+      "equation": "y = 0.0202\u00b7log(x) + 0.8173",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 10
+    },
+    "precision_macro_classes_2": {
+      "func_type": "log",
+      "params": [
+        0.007351123577273142,
+        0.9417198350711659
+      ],
+      "r_squared": 0.9887759692695539,
+      "equation": "y = 0.0074\u00b7log(x) + 0.9417",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 2
+    },
+    "precision_macro_classes_3": {
+      "func_type": "log",
+      "params": [
+        0.005153548148419449,
+        0.9543838660762867
+      ],
+      "r_squared": 0.9811432625473403,
+      "equation": "y = 0.0052\u00b7log(x) + 0.9544",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 3
+    },
+    "precision_macro_classes_4": {
+      "func_type": "log",
+      "params": [
+        0.0061494780491056335,
+        0.9559693662187991
+      ],
+      "r_squared": 0.9739920097071832,
+      "equation": "y = 0.0061\u00b7log(x) + 0.9560",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 4
+    },
+    "precision_macro_classes_5": {
+      "func_type": "log",
+      "params": [
+        0.008893334389519095,
+        0.9280683887036184
+      ],
+      "r_squared": 0.995543801204755,
+      "equation": "y = 0.0089\u00b7log(x) + 0.9281",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 5
+    },
+    "precision_macro_classes_6": {
+      "func_type": "log",
+      "params": [
+        0.016231240702456077,
+        0.8600831523182684
+      ],
+      "r_squared": 0.9964520782048609,
+      "equation": "y = 0.0162\u00b7log(x) + 0.8601",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 6
+    },
+    "precision_macro_classes_7": {
+      "func_type": "log",
+      "params": [
+        0.013687091028985162,
+        0.8843887494812587
+      ],
+      "r_squared": 0.9937855666116318,
+      "equation": "y = 0.0137\u00b7log(x) + 0.8844",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 7
+    },
+    "precision_macro_classes_8": {
+      "func_type": "log",
+      "params": [
+        0.014819252393770141,
+        0.875449847683061
+      ],
+      "r_squared": 0.9958487661301803,
+      "equation": "y = 0.0148\u00b7log(x) + 0.8754",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 8
+    },
+    "precision_macro_classes_9": {
+      "func_type": "log",
+      "params": [
+        0.01877559558494072,
+        0.8369305721578966
+      ],
+      "r_squared": 0.991325820763785,
+      "equation": "y = 0.0188\u00b7log(x) + 0.8369",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 9
+    },
+    "precision_macro_classes_10": {
+      "func_type": "log",
+      "params": [
+        0.01792281227928162,
+        0.8372436949590868
+      ],
+      "r_squared": 0.9797755278840565,
+      "equation": "y = 0.0179\u00b7log(x) + 0.8372",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 10
+    },
+    "recall_macro_classes_2": {
+      "func_type": "log",
+      "params": [
+        0.0075247459219343876,
+        0.9407999455199172
+      ],
+      "r_squared": 0.9882134061732716,
+      "equation": "y = 0.0075\u00b7log(x) + 0.9408",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 2
+    },
+    "recall_macro_classes_3": {
+      "func_type": "log",
+      "params": [
+        0.00533999508257952,
+        0.9534384580396432
+      ],
+      "r_squared": 0.9786435425754161,
+      "equation": "y = 0.0053\u00b7log(x) + 0.9534",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 3
+    },
+    "recall_macro_classes_4": {
+      "func_type": "log",
+      "params": [
+        0.006372940847746844,
+        0.9549308086186278
+      ],
+      "r_squared": 0.9708632996662291,
+      "equation": "y = 0.0064\u00b7log(x) + 0.9549",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 4
+    },
+    "recall_macro_classes_5": {
+      "func_type": "log",
+      "params": [
+        0.008882980576987637,
+        0.9278361609907287
+      ],
+      "r_squared": 0.9959515773635274,
+      "equation": "y = 0.0089\u00b7log(x) + 0.9278",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 5
+    },
+    "recall_macro_classes_6": {
+      "func_type": "log",
+      "params": [
+        0.017153211949467572,
+        0.8556936841777052
+      ],
+      "r_squared": 0.995831160012171,
+      "equation": "y = 0.0172\u00b7log(x) + 0.8557",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 6
+    },
+    "recall_macro_classes_7": {
+      "func_type": "log",
+      "params": [
+        0.01437523579956863,
+        0.8811234185330173
+      ],
+      "r_squared": 0.9936180108487795,
+      "equation": "y = 0.0144\u00b7log(x) + 0.8811",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 7
+    },
+    "recall_macro_classes_8": {
+      "func_type": "log",
+      "params": [
+        0.015305738861226636,
+        0.8727613144116163
+      ],
+      "r_squared": 0.9956404874156173,
+      "equation": "y = 0.0153\u00b7log(x) + 0.8728",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 8
+    },
+    "recall_macro_classes_9": {
+      "func_type": "log",
+      "params": [
+        0.020303615425385314,
+        0.8299711127099492
+      ],
+      "r_squared": 0.9884667468296274,
+      "equation": "y = 0.0203\u00b7log(x) + 0.8300",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 9
+    },
+    "recall_macro_classes_10": {
+      "func_type": "log",
+      "params": [
+        0.018229005676906367,
+        0.8351223210111356
+      ],
+      "r_squared": 0.9769361900800083,
+      "equation": "y = 0.0182\u00b7log(x) + 0.8351",
+      "x_min": 10.0,
+      "x_max": 100.0,
+      "x_col": "subset_pct",
+      "num_classes": 10
+    },
+    "iso_accuracy_90pct": {
+      "func_type": "power",
+      "params": [
+        3.992722684335123e-06,
+        6.834357843455242,
+        9.921263621103105
+      ],
+      "r_squared": 0.8837329635335117,
+      "equation": "y = 0.0000\u00b7x^6.8344 + 9.9213",
+      "target_accuracy": 0.9,
+      "x_min": 2.0,
+      "x_max": 10.0
+    },
+    "scaling_law_pct_50": {
+      "func_type": "log",
+      "params": [
+        -0.04486103287645545,
+        1.020301847598374
+      ],
+      "r_squared": 0.7416261339986999,
+      "equation": "y = -0.0449\u00b7log(x) + 1.0203",
+      "data_pct": 50,
+      "x_min": 2.0,
+      "x_max": 10.0
+    },
+    "scaling_law_pct_100": {
+      "func_type": "log",
+      "params": [
+        -0.039800947313453856,
+        1.018600686998878
+      ],
+      "r_squared": 0.7372784999558695,
+      "equation": "y = -0.0398\u00b7log(x) + 1.0186",
+      "data_pct": 100,
+      "x_min": 2.0,
+      "x_max": 10.0
+    }
+  }
+}

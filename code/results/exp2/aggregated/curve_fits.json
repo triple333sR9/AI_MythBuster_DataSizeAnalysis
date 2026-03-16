@@ -1,0 +1,941 @@
+{
+  "experiment": "exp2",
+  "fits": {
+    "accuracy_baseline": {
+      "func_type": "log",
+      "params": [
+        0.02176647143922068,
+        0.6820147796790984
+      ],
+      "r_squared": 0.9859717464463474,
+      "equation": "y = 0.0218\u00b7log(x) + 0.6820",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.0
+    },
+    "accuracy_noise_5pct": {
+      "func_type": "linear",
+      "params": [
+        2.3696969699342332e-07,
+        0.9003145454534083
+      ],
+      "r_squared": 0.7381747002029813,
+      "equation": "y = 0.000000x + 0.9003",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.05
+    },
+    "accuracy_noise_10pct": {
+      "func_type": "linear",
+      "params": [
+        1.3484845572596722e-07,
+        0.9036700013105136
+      ],
+      "r_squared": 0.4774586013675456,
+      "equation": "y = 0.000000x + 0.9037",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.1
+    },
+    "accuracy_noise_15pct": {
+      "func_type": "linear",
+      "params": [
+        9.121197862105687e-08,
+        0.904830006416598
+      ],
+      "r_squared": 0.3561236875445569,
+      "equation": "y = 0.000000x + 0.9048",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.15
+    },
+    "accuracy_noise_20pct": {
+      "func_type": "linear",
+      "params": [
+        2.2363725569062025e-08,
+        0.9068136323493865
+      ],
+      "r_squared": 0.022377382180685634,
+      "equation": "y = 0.000000x + 0.9068",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.2
+    },
+    "accuracy_noise_25pct": {
+      "func_type": "linear",
+      "params": [
+        5.0424051439567895e-08,
+        0.9038818267761202
+      ],
+      "r_squared": 0.08853984666458792,
+      "equation": "y = 0.000000x + 0.9039",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.25
+    },
+    "accuracy_noise_30pct": {
+      "func_type": "linear",
+      "params": [
+        -3.515158448339417e-08,
+        0.9066727303921913
+      ],
+      "r_squared": 0.03521517476719849,
+      "equation": "y = -0.000000x + 0.9067",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.3
+    },
+    "accuracy_noise_35pct": {
+      "func_type": "linear",
+      "params": [
+        -1.3393902570116316e-08,
+        0.9036590892524992
+      ],
+      "r_squared": 0.0022020149556938318,
+      "equation": "y = -0.000000x + 0.9037",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.35
+    },
+    "accuracy_noise_40pct": {
+      "func_type": "linear",
+      "params": [
+        -3.303010376264347e-08,
+        0.9043772637602245
+      ],
+      "r_squared": 0.019746770643552347,
+      "equation": "y = -0.000000x + 0.9044",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.4
+    },
+    "balanced_accuracy_baseline": {
+      "func_type": "log",
+      "params": [
+        0.021766470930893057,
+        0.6820147848249744
+      ],
+      "r_squared": 0.9859717464463477,
+      "equation": "y = 0.0218\u00b7log(x) + 0.6820",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.0
+    },
+    "balanced_accuracy_noise_5pct": {
+      "func_type": "linear",
+      "params": [
+        2.3696969699342734e-07,
+        0.9003145454534082
+      ],
+      "r_squared": 0.7381747002029843,
+      "equation": "y = 0.000000x + 0.9003",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.05
+    },
+    "balanced_accuracy_noise_10pct": {
+      "func_type": "linear",
+      "params": [
+        1.3484844197662415e-07,
+        0.903670001929233
+      ],
+      "r_squared": 0.4774586013675465,
+      "equation": "y = 0.000000x + 0.9037",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.1
+    },
+    "balanced_accuracy_noise_15pct": {
+      "func_type": "linear",
+      "params": [
+        9.121192630128151e-08,
+        0.9048300087710694
+      ],
+      "r_squared": 0.356123687543774,
+      "equation": "y = 0.000000x + 0.9048",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.15
+    },
+    "balanced_accuracy_noise_20pct": {
+      "func_type": "linear",
+      "params": [
+        2.2364047709384888e-08,
+        0.9068136178524272
+      ],
+      "r_squared": 0.022377382173492277,
+      "equation": "y = 0.000000x + 0.9068",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.2
+    },
+    "balanced_accuracy_noise_25pct": {
+      "func_type": "linear",
+      "params": [
+        5.042458355984627e-08,
+        0.9038818028309722
+      ],
+      "r_squared": 0.0885398466618218,
+      "equation": "y = 0.000000x + 0.9039",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.25
+    },
+    "balanced_accuracy_noise_30pct": {
+      "func_type": "linear",
+      "params": [
+        -3.515158448339452e-08,
+        0.9066727303921913
+      ],
+      "r_squared": 0.03521517476719904,
+      "equation": "y = -0.000000x + 0.9067",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.3
+    },
+    "balanced_accuracy_noise_35pct": {
+      "func_type": "linear",
+      "params": [
+        -1.3391653809766396e-08,
+        0.9036589880580733
+      ],
+      "r_squared": 0.0022020148915989912,
+      "equation": "y = -0.000000x + 0.9037",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.35
+    },
+    "balanced_accuracy_noise_40pct": {
+      "func_type": "linear",
+      "params": [
+        -3.303010376264347e-08,
+        0.9043772637602245
+      ],
+      "r_squared": 0.019746770643552347,
+      "equation": "y = -0.000000x + 0.9044",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.4
+    },
+    "f1_macro_baseline": {
+      "func_type": "log",
+      "params": [
+        0.021967232006119185,
+        0.6795974266685746
+      ],
+      "r_squared": 0.9836127199214376,
+      "equation": "y = 0.0220\u00b7log(x) + 0.6796",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.0
+    },
+    "f1_macro_noise_5pct": {
+      "func_type": "linear",
+      "params": [
+        2.2724774162145752e-07,
+        0.9004615874527662
+      ],
+      "r_squared": 0.7452207934872404,
+      "equation": "y = 0.000000x + 0.9005",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.05
+    },
+    "f1_macro_noise_10pct": {
+      "func_type": "linear",
+      "params": [
+        1.3482010103091033e-07,
+        0.9032136057786655
+      ],
+      "r_squared": 0.4250008147079668,
+      "equation": "y = 0.000000x + 0.9032",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.1
+    },
+    "f1_macro_noise_15pct": {
+      "func_type": "linear",
+      "params": [
+        8.867350861579457e-08,
+        0.9046341129626724
+      ],
+      "r_squared": 0.400196597848957,
+      "equation": "y = 0.000000x + 0.9046",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.15
+    },
+    "f1_macro_noise_20pct": {
+      "func_type": "linear",
+      "params": [
+        1.897119069292702e-08,
+        0.9064004213690372
+      ],
+      "r_squared": 0.013785144131269522,
+      "equation": "y = 0.000000x + 0.9064",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.2
+    },
+    "f1_macro_noise_25pct": {
+      "func_type": "linear",
+      "params": [
+        6.402150447844359e-08,
+        0.902741970981611
+      ],
+      "r_squared": 0.11188515324098414,
+      "equation": "y = 0.000000x + 0.9027",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.25
+    },
+    "f1_macro_noise_30pct": {
+      "func_type": "linear",
+      "params": [
+        -2.8177966314721165e-08,
+        0.906061749609061
+      ],
+      "r_squared": 0.021564414313121172,
+      "equation": "y = -0.000000x + 0.9061",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.3
+    },
+    "f1_macro_noise_35pct": {
+      "func_type": "linear",
+      "params": [
+        7.052326258145876e-09,
+        0.9020507840141775
+      ],
+      "r_squared": 0.0004932087103250993,
+      "equation": "y = 0.000000x + 0.9021",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.35
+    },
+    "f1_macro_noise_40pct": {
+      "func_type": "linear",
+      "params": [
+        -4.615573629242776e-08,
+        0.9043980184181533
+      ],
+      "r_squared": 0.03317234511940992,
+      "equation": "y = -0.000000x + 0.9044",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.4
+    },
+    "auroc_macro_baseline": {
+      "func_type": "log",
+      "params": [
+        0.0027109992762146505,
+        0.9658265583176101
+      ],
+      "r_squared": 0.9739745729358241,
+      "equation": "y = 0.0027\u00b7log(x) + 0.9658",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.0
+    },
+    "auroc_macro_noise_5pct": {
+      "func_type": "linear",
+      "params": [
+        1.762247263554749e-08,
+        0.9932496989334209
+      ],
+      "r_squared": 0.7156199835186456,
+      "equation": "y = 0.000000x + 0.9932",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.05
+    },
+    "auroc_macro_noise_10pct": {
+      "func_type": "linear",
+      "params": [
+        1.584456300026086e-09,
+        0.9936397175472993
+      ],
+      "r_squared": 0.00856283149939474,
+      "equation": "y = 0.000000x + 0.9936",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.1
+    },
+    "auroc_macro_noise_15pct": {
+      "func_type": "linear",
+      "params": [
+        -1.4688543207438347e-08,
+        0.9941448586867856
+      ],
+      "r_squared": 0.4823078847044491,
+      "equation": "y = -0.000000x + 0.9941",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.15
+    },
+    "auroc_macro_noise_20pct": {
+      "func_type": "linear",
+      "params": [
+        -1.4467723482334528e-08,
+        0.9939075477589141
+      ],
+      "r_squared": 0.2810149543702052,
+      "equation": "y = -0.000000x + 0.9939",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.2
+    },
+    "auroc_macro_noise_25pct": {
+      "func_type": "linear",
+      "params": [
+        -2.1362463429089313e-08,
+        0.9940369282287806
+      ],
+      "r_squared": 0.42648888123060813,
+      "equation": "y = -0.000000x + 0.9940",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.25
+    },
+    "auroc_macro_noise_30pct": {
+      "func_type": "linear",
+      "params": [
+        -3.0701153864270925e-08,
+        0.9942623279848182
+      ],
+      "r_squared": 0.5353037627781465,
+      "equation": "y = -0.000000x + 0.9943",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.3
+    },
+    "auroc_macro_noise_35pct": {
+      "func_type": "linear",
+      "params": [
+        -3.383416922071021e-08,
+        0.9941630936755457
+      ],
+      "r_squared": 0.44938006961965826,
+      "equation": "y = -0.000000x + 0.9942",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.35
+    },
+    "auroc_macro_noise_40pct": {
+      "func_type": "linear",
+      "params": [
+        -3.0789353554020946e-08,
+        0.9939208980816487
+      ],
+      "r_squared": 0.35500603801758646,
+      "equation": "y = -0.000000x + 0.9939",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.4
+    },
+    "auprc_macro_baseline": {
+      "func_type": "log",
+      "params": [
+        0.016679759446042414,
+        0.7861759443764074
+      ],
+      "r_squared": 0.9805915412414862,
+      "equation": "y = 0.0167\u00b7log(x) + 0.7862",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.0
+    },
+    "auprc_macro_noise_5pct": {
+      "func_type": "linear",
+      "params": [
+        1.4457285924839575e-07,
+        0.9546668359577549
+      ],
+      "r_squared": 0.831228454266968,
+      "equation": "y = 0.000000x + 0.9547",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.05
+    },
+    "auprc_macro_noise_10pct": {
+      "func_type": "linear",
+      "params": [
+        5.6934186452427004e-08,
+        0.957067292277963
+      ],
+      "r_squared": 0.33997111899418164,
+      "equation": "y = 0.000000x + 0.9571",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.1
+    },
+    "auprc_macro_noise_15pct": {
+      "func_type": "linear",
+      "params": [
+        -8.722346188186626e-09,
+        0.9591946611626752
+      ],
+      "r_squared": 0.0185263906904809,
+      "equation": "y = -0.000000x + 0.9592",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.15
+    },
+    "auprc_macro_noise_20pct": {
+      "func_type": "linear",
+      "params": [
+        -2.160769941065132e-08,
+        0.9586493851840364
+      ],
+      "r_squared": 0.049333413494228595,
+      "equation": "y = -0.000000x + 0.9586",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.2
+    },
+    "auprc_macro_noise_25pct": {
+      "func_type": "linear",
+      "params": [
+        -4.516927466030135e-08,
+        0.9584973097273582
+      ],
+      "r_squared": 0.1364070563113151,
+      "equation": "y = -0.000000x + 0.9585",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.25
+    },
+    "auprc_macro_noise_30pct": {
+      "func_type": "linear",
+      "params": [
+        -1.0626339069236753e-07,
+        0.9603827262210961
+      ],
+      "r_squared": 0.42134350032876633,
+      "equation": "y = -0.000000x + 0.9604",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.3
+    },
+    "auprc_macro_noise_35pct": {
+      "func_type": "linear",
+      "params": [
+        -1.4497821967651795e-07,
+        0.9605170061790107
+      ],
+      "r_squared": 0.4118661385299984,
+      "equation": "y = -0.000000x + 0.9605",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.35
+    },
+    "auprc_macro_noise_40pct": {
+      "func_type": "linear",
+      "params": [
+        -1.394237835692968e-07,
+        0.9597255321531882
+      ],
+      "r_squared": 0.40570488636803104,
+      "equation": "y = -0.000000x + 0.9597",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.4
+    },
+    "mcc_baseline": {
+      "func_type": "log",
+      "params": [
+        0.024005860696367332,
+        0.6487324830270886
+      ],
+      "r_squared": 0.9868010160180276,
+      "equation": "y = 0.0240\u00b7log(x) + 0.6487",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.0
+    },
+    "mcc_noise_5pct": {
+      "func_type": "linear",
+      "params": [
+        2.6332351257357555e-07,
+        0.8894190178816752
+      ],
+      "r_squared": 0.7396882398456135,
+      "equation": "y = 0.000000x + 0.8894",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.05
+    },
+    "mcc_noise_10pct": {
+      "func_type": "linear",
+      "params": [
+        1.482590635309413e-07,
+        0.8932106199966279
+      ],
+      "r_squared": 0.4805132817293909,
+      "equation": "y = 0.000000x + 0.8932",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.1
+    },
+    "mcc_noise_15pct": {
+      "func_type": "linear",
+      "params": [
+        9.954259885764805e-08,
+        0.8944946980591342
+      ],
+      "r_squared": 0.34732049829505107,
+      "equation": "y = 0.000000x + 0.8945",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.15
+    },
+    "mcc_noise_20pct": {
+      "func_type": "linear",
+      "params": [
+        2.618203979009106e-08,
+        0.8966037948896673
+      ],
+      "r_squared": 0.0258059349644979,
+      "equation": "y = 0.000000x + 0.8966",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.2
+    },
+    "mcc_noise_25pct": {
+      "func_type": "linear",
+      "params": [
+        5.300741083471022e-08,
+        0.8935355253904622
+      ],
+      "r_squared": 0.08242937880813628,
+      "equation": "y = 0.000000x + 0.8935",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.25
+    },
+    "mcc_noise_30pct": {
+      "func_type": "linear",
+      "params": [
+        -3.926300155425037e-08,
+        0.896507679097998
+      ],
+      "r_squared": 0.036872325019339125,
+      "equation": "y = -0.000000x + 0.8965",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.3
+    },
+    "mcc_noise_35pct": {
+      "func_type": "linear",
+      "params": [
+        -2.0352164515300883e-08,
+        0.8934527325160065
+      ],
+      "r_squared": 0.004355913703333103,
+      "equation": "y = -0.000000x + 0.8935",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.35
+    },
+    "mcc_noise_40pct": {
+      "func_type": "linear",
+      "params": [
+        -3.4971344909178285e-08,
+        0.893878866655751
+      ],
+      "r_squared": 0.01843157438812959,
+      "equation": "y = -0.000000x + 0.8939",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.4
+    },
+    "precision_macro_baseline": {
+      "func_type": "log",
+      "params": [
+        0.020683453357068487,
+        0.6941896959842695
+      ],
+      "r_squared": 0.9887988411581264,
+      "equation": "y = 0.0207\u00b7log(x) + 0.6942",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.0
+    },
+    "precision_macro_noise_5pct": {
+      "func_type": "linear",
+      "params": [
+        2.1941114513918371e-07,
+        0.9020454198067404
+      ],
+      "r_squared": 0.7756635416794766,
+      "equation": "y = 0.000000x + 0.9020",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.05
+    },
+    "precision_macro_noise_10pct": {
+      "func_type": "linear",
+      "params": [
+        1.2023262305194263e-07,
+        0.9048960391168772
+      ],
+      "r_squared": 0.3886875772675533,
+      "equation": "y = 0.000000x + 0.9049",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.1
+    },
+    "precision_macro_noise_15pct": {
+      "func_type": "linear",
+      "params": [
+        7.148519883251442e-08,
+        0.9064268609078058
+      ],
+      "r_squared": 0.3567183890759401,
+      "equation": "y = 0.000000x + 0.9064",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.15
+    },
+    "precision_macro_noise_20pct": {
+      "func_type": "linear",
+      "params": [
+        2.859947009390519e-08,
+        0.9071406057358474
+      ],
+      "r_squared": 0.04022313177118764,
+      "equation": "y = 0.000000x + 0.9071",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.2
+    },
+    "precision_macro_noise_25pct": {
+      "func_type": "linear",
+      "params": [
+        5.207548881999735e-08,
+        0.9044591367610988
+      ],
+      "r_squared": 0.08271094320487493,
+      "equation": "y = 0.000000x + 0.9045",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.25
+    },
+    "precision_macro_noise_30pct": {
+      "func_type": "linear",
+      "params": [
+        -2.5093601486574323e-08,
+        0.9072739294614605
+      ],
+      "r_squared": 0.020800956744961074,
+      "equation": "y = -0.000000x + 0.9073",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.3
+    },
+    "precision_macro_noise_35pct": {
+      "func_type": "linear",
+      "params": [
+        -2.478453008402564e-08,
+        0.9049918131293295
+      ],
+      "r_squared": 0.008676465286430735,
+      "equation": "y = -0.000000x + 0.9050",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.35
+    },
+    "precision_macro_noise_40pct": {
+      "func_type": "linear",
+      "params": [
+        -4.293591140582604e-08,
+        0.9054409269386583
+      ],
+      "r_squared": 0.032366501089953204,
+      "equation": "y = -0.000000x + 0.9054",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.4
+    },
+    "recall_macro_baseline": {
+      "func_type": "log",
+      "params": [
+        0.021766470930893057,
+        0.6820147848249744
+      ],
+      "r_squared": 0.9859717464463477,
+      "equation": "y = 0.0218\u00b7log(x) + 0.6820",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.0
+    },
+    "recall_macro_noise_5pct": {
+      "func_type": "linear",
+      "params": [
+        2.3696969699342734e-07,
+        0.9003145454534082
+      ],
+      "r_squared": 0.7381747002029843,
+      "equation": "y = 0.000000x + 0.9003",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.05
+    },
+    "recall_macro_noise_10pct": {
+      "func_type": "linear",
+      "params": [
+        1.3484844197662415e-07,
+        0.903670001929233
+      ],
+      "r_squared": 0.4774586013675465,
+      "equation": "y = 0.000000x + 0.9037",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.1
+    },
+    "recall_macro_noise_15pct": {
+      "func_type": "linear",
+      "params": [
+        9.121192630128151e-08,
+        0.9048300087710694
+      ],
+      "r_squared": 0.356123687543774,
+      "equation": "y = 0.000000x + 0.9048",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.15
+    },
+    "recall_macro_noise_20pct": {
+      "func_type": "linear",
+      "params": [
+        2.2364047709384888e-08,
+        0.9068136178524272
+      ],
+      "r_squared": 0.022377382173492277,
+      "equation": "y = 0.000000x + 0.9068",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.2
+    },
+    "recall_macro_noise_25pct": {
+      "func_type": "linear",
+      "params": [
+        5.042458355984627e-08,
+        0.9038818028309722
+      ],
+      "r_squared": 0.0885398466618218,
+      "equation": "y = 0.000000x + 0.9039",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.25
+    },
+    "recall_macro_noise_30pct": {
+      "func_type": "linear",
+      "params": [
+        -3.515158448339452e-08,
+        0.9066727303921913
+      ],
+      "r_squared": 0.03521517476719904,
+      "equation": "y = -0.000000x + 0.9067",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.3
+    },
+    "recall_macro_noise_35pct": {
+      "func_type": "linear",
+      "params": [
+        -1.3391653809766396e-08,
+        0.9036589880580733
+      ],
+      "r_squared": 0.0022020148915989912,
+      "equation": "y = -0.000000x + 0.9037",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.35
+    },
+    "recall_macro_noise_40pct": {
+      "func_type": "linear",
+      "params": [
+        -3.303010376264347e-08,
+        0.9043772637602245
+      ],
+      "r_squared": 0.019746770643552347,
+      "equation": "y = -0.000000x + 0.9044",
+      "x_min": 30000.0,
+      "x_max": 60000.0,
+      "x_col": "total_samples",
+      "noise_rate": 0.4
+    }
+  }
+}

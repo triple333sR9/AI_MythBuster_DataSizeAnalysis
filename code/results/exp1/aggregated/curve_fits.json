@@ -1,0 +1,101 @@
+{
+  "experiment": "exp1",
+  "fits": {
+    "accuracy": {
+      "func_type": "log",
+      "params": [
+        0.02176647143922068,
+        0.6820147796790984
+      ],
+      "r_squared": 0.9859717464463474,
+      "equation": "y = 0.0218\u00b7log(x) + 0.6820",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "num_samples"
+    },
+    "balanced_accuracy": {
+      "func_type": "log",
+      "params": [
+        0.021766470930893057,
+        0.6820147848249744
+      ],
+      "r_squared": 0.9859717464463477,
+      "equation": "y = 0.0218\u00b7log(x) + 0.6820",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "num_samples"
+    },
+    "f1_macro": {
+      "func_type": "log",
+      "params": [
+        0.021967232006119185,
+        0.6795974266685746
+      ],
+      "r_squared": 0.9836127199214376,
+      "equation": "y = 0.0220\u00b7log(x) + 0.6796",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "num_samples"
+    },
+    "auroc_macro": {
+      "func_type": "log",
+      "params": [
+        0.0027109992762146505,
+        0.9658265583176101
+      ],
+      "r_squared": 0.9739745729358241,
+      "equation": "y = 0.0027\u00b7log(x) + 0.9658",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "num_samples"
+    },
+    "auprc_macro": {
+      "func_type": "log",
+      "params": [
+        0.016679759446042414,
+        0.7861759443764074
+      ],
+      "r_squared": 0.9805915412414862,
+      "equation": "y = 0.0167\u00b7log(x) + 0.7862",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "num_samples"
+    },
+    "mcc": {
+      "func_type": "log",
+      "params": [
+        0.024005860696367332,
+        0.6487324830270886
+      ],
+      "r_squared": 0.9868010160180276,
+      "equation": "y = 0.0240\u00b7log(x) + 0.6487",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "num_samples"
+    },
+    "precision_macro": {
+      "func_type": "log",
+      "params": [
+        0.020683453357068487,
+        0.6941896959842695
+      ],
+      "r_squared": 0.9887988411581264,
+      "equation": "y = 0.0207\u00b7log(x) + 0.6942",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "num_samples"
+    },
+    "recall_macro": {
+      "func_type": "log",
+      "params": [
+        0.021766470930893057,
+        0.6820147848249744
+      ],
+      "r_squared": 0.9859717464463477,
+      "equation": "y = 0.0218\u00b7log(x) + 0.6820",
+      "x_min": 3000.0,
+      "x_max": 60000.0,
+      "x_col": "num_samples"
+    }
+  }
+}
