@@ -570,7 +570,7 @@ def plot_exp3_learning_curves(df: pd.DataFrame, metric: str, title: str,
                 x_smooth = np.linspace(x.min(), x.max(), 100)
                 ax.plot(x_smooth, func(x_smooth, *params), '--', color=color,
                        linewidth=1, alpha=0.5)
-                equations.append(f"{nc}c: R²={r2:.3f}")
+                equations.append(f"{nc}c: {eq} (R²={r2:.3f})")
                 if curve_fits is not None:
                     curve_fits[f"{metric}_classes_{nc}"] = {
                         "func_type": "log",

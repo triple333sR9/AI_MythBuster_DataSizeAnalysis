@@ -1,2 +1,2 @@
 func_type,equation,r_squared,x_min,x_max,efficiency_x,efficiency_y,efficiency_note,efficiency_ratio,knee_x,knee_y,knee_note,marginal_x,marginal_y,marginal_note,marginal_threshold,metric,condition,noise_rate
-log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,3000.0,0.8563,boundary,0.00028543,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,accuracy,baseline,0.0
+log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,3001.0,0.8563,analytical,0.00028534,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,accuracy,baseline,0.0

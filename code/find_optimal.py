@@ -45,10 +45,15 @@ def get_curve_func(func_type: str, params: List[float]):
 def find_efficiency(func_type: str, params: List[float], x_min: float, x_max: float) -> Tuple:
     """Find x where metric/x is maximized."""
     f, _ = get_curve_func(func_type, params)
+    f_min = f(x_min)
 
     if func_type == "log":
-        a, b = params
-        x_opt = np.exp(1 - b / a) if a != 0 else x_min
+        res = minimize_scalar(
+            lambda x: -(f(x) - f_min) / (x - x_min),
+            bounds=(x_min + 1, x_max),
+            method='bounded'
+        )
+        x_opt = res.x
         if x_min <= x_opt <= x_max:
             return x_opt, f(x_opt), "analytical"
         return (x_min, f(x_min), "boundary") if f(x_min) / x_min > f(x_max) / x_max else (x_max, f(x_max), "boundary")
@@ -96,9 +101,10 @@ def find_efficiency_exp2(func_type: str, params: List[float], x_min: float, x_ma
     """For exp2: maximize metric per noisy/clean ratio."""
     f, _ = get_curve_func(func_type, params)
     x_min = max(x_min, clean + 1)
+    f_min = f(x_min)
     if x_min >= x_max:
         return None, None, None, "invalid"
-    res = minimize_scalar(lambda x: -f(x) / ((x - clean) / clean), bounds=(x_min, x_max), method='bounded')
+    res = minimize_scalar(lambda x: -(f(x) - f_min) / ((x - clean) / clean), bounds=(x_min + 1, x_max), method='bounded')
     return res.x, f(res.x), (res.x - clean) / clean, "numerical"
 
 
