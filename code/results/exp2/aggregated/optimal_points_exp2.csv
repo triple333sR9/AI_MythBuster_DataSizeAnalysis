@@ -8,7 +8,7 @@ linear,y = 0.000000x + 0.9039,0.0885,30000.0,60000.0,1.0,60000.0,0.9069,numerica
 linear,y = -0.000000x + 0.9067,0.0352,30000.0,60000.0,0.0001,30002.0,0.9056,numerical,,,no_knee,30000.0,0.9056,constant,0.0001,accuracy,30% noise,0.3
 linear,y = -0.000000x + 0.9037,0.0022,30000.0,60000.0,0.0001,30002.0,0.9033,numerical,,,no_knee,30000.0,0.9033,constant,0.0001,accuracy,35% noise,0.35
 linear,y = -0.000000x + 0.9044,0.0197,30000.0,60000.0,0.0001,30002.0,0.9034,numerical,,,no_knee,30000.0,0.9034,constant,0.0001,accuracy,40% noise,0.4
-log,y = 0.0218�log(x) + 0.6820,0.986,3000.0,60000.0,,3001.0,0.8563,analytical,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,balanced_accuracy,baseline,0.0
+log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,,3001.0,0.8563,analytical,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,balanced_accuracy,baseline,0.0
 linear,y = 0.000000x + 0.9003,0.7382,30000.0,60000.0,1.0,60000.0,0.9145,numerical,,,no_knee,30000.0,0.9074,constant,0.0001,balanced_accuracy,5% noise,0.05
 linear,y = 0.000000x + 0.9037,0.4775,30000.0,60000.0,1.0,60000.0,0.9118,numerical,,,no_knee,30000.0,0.9077,constant,0.0001,balanced_accuracy,10% noise,0.1
 linear,y = 0.000000x + 0.9048,0.3561,30000.0,60000.0,1.0,60000.0,0.9103,numerical,,,no_knee,30000.0,0.9076,constant,0.0001,balanced_accuracy,15% noise,0.15
@@ -17,7 +17,7 @@ linear,y = 0.000000x + 0.9039,0.0885,30000.0,60000.0,1.0,60000.0,0.9069,numerica
 linear,y = -0.000000x + 0.9067,0.0352,30000.0,60000.0,0.0001,30002.0,0.9056,numerical,,,no_knee,30000.0,0.9056,constant,0.0001,balanced_accuracy,30% noise,0.3
 linear,y = -0.000000x + 0.9037,0.0022,30000.0,60000.0,0.0001,30002.0,0.9033,numerical,,,no_knee,30000.0,0.9033,constant,0.0001,balanced_accuracy,35% noise,0.35
 linear,y = -0.000000x + 0.9044,0.0197,30000.0,60000.0,0.0001,30002.0,0.9034,numerical,,,no_knee,30000.0,0.9034,constant,0.0001,balanced_accuracy,40% noise,0.4
-log,y = 0.0220�log(x) + 0.6796,0.9836,3000.0,60000.0,,3001.0,0.8555,analytical,19033.03,0.8961,max_distance,3000.0,0.8555,dy/dx=0.0001,0.0001,f1_macro,baseline,0.0
+log,y = 0.0220·log(x) + 0.6796,0.9836,3000.0,60000.0,,3001.0,0.8555,analytical,19033.03,0.8961,max_distance,3000.0,0.8555,dy/dx=0.0001,0.0001,f1_macro,baseline,0.0
 linear,y = 0.000000x + 0.9005,0.7452,30000.0,60000.0,1.0,60000.0,0.9141,numerical,,,no_knee,30000.0,0.9073,constant,0.0001,f1_macro,5% noise,0.05
 linear,y = 0.000000x + 0.9032,0.425,30000.0,60000.0,1.0,60000.0,0.9113,numerical,,,no_knee,30000.0,0.9073,constant,0.0001,f1_macro,10% noise,0.1
 linear,y = 0.000000x + 0.9046,0.4002,30000.0,60000.0,1.0,60000.0,0.91,numerical,,,no_knee,30000.0,0.9073,constant,0.0001,f1_macro,15% noise,0.15
@@ -26,7 +26,7 @@ linear,y = 0.000000x + 0.9027,0.1119,30000.0,60000.0,1.0,60000.0,0.9066,numerica
 linear,y = -0.000000x + 0.9061,0.0216,30000.0,60000.0,0.0001,30002.0,0.9052,numerical,,,no_knee,30000.0,0.9052,constant,0.0001,f1_macro,30% noise,0.3
 linear,y = 0.000000x + 0.9021,0.0005,30000.0,60000.0,1.0,60000.0,0.9025,numerical,,,no_knee,30000.0,0.9023,constant,0.0001,f1_macro,35% noise,0.35
 linear,y = -0.000000x + 0.9044,0.0332,30000.0,60000.0,0.0001,30002.0,0.903,numerical,,,no_knee,30000.0,0.903,constant,0.0001,f1_macro,40% noise,0.4
-log,y = 0.0027�log(x) + 0.9658,0.974,3000.0,60000.0,,3001.0,0.9875,analytical,19033.03,0.9925,max_distance,3000.0,0.9875,dy/dx=0.0001,0.0001,auroc_macro,baseline,0.0
+log,y = 0.0027·log(x) + 0.9658,0.974,3000.0,60000.0,,3001.0,0.9875,analytical,19033.03,0.9925,max_distance,3000.0,0.9875,dy/dx=0.0001,0.0001,auroc_macro,baseline,0.0
 linear,y = 0.000000x + 0.9932,0.7156,30000.0,60000.0,1.0,60000.0,0.9943,numerical,,,no_knee,30000.0,0.9938,constant,0.0001,auroc_macro,5% noise,0.05
 linear,y = 0.000000x + 0.9936,0.0086,30000.0,60000.0,1.0,60000.0,0.9937,numerical,,,no_knee,30000.0,0.9937,constant,0.0001,auroc_macro,10% noise,0.1
 linear,y = -0.000000x + 0.9941,0.4823,30000.0,60000.0,0.0001,30002.0,0.9937,numerical,,,no_knee,30000.0,0.9937,constant,0.0001,auroc_macro,15% noise,0.15
@@ -35,7 +35,7 @@ linear,y = -0.000000x + 0.9940,0.4265,30000.0,60000.0,0.0001,30002.0,0.9934,nume
 linear,y = -0.000000x + 0.9943,0.5353,30000.0,60000.0,0.0001,30002.0,0.9933,numerical,,,no_knee,30000.0,0.9933,constant,0.0001,auroc_macro,30% noise,0.3
 linear,y = -0.000000x + 0.9942,0.4494,30000.0,60000.0,0.0001,30002.0,0.9931,numerical,,,no_knee,30000.0,0.9931,constant,0.0001,auroc_macro,35% noise,0.35
 linear,y = -0.000000x + 0.9939,0.355,30000.0,60000.0,0.0001,30002.0,0.993,numerical,,,no_knee,30000.0,0.993,constant,0.0001,auroc_macro,40% noise,0.4
-log,y = 0.0167�log(x) + 0.7862,0.9806,3000.0,60000.0,,3001.0,0.9197,analytical,19033.03,0.9505,max_distance,3000.0,0.9197,dy/dx=0.0001,0.0001,auprc_macro,baseline,0.0
+log,y = 0.0167·log(x) + 0.7862,0.9806,3000.0,60000.0,,3001.0,0.9197,analytical,19033.03,0.9505,max_distance,3000.0,0.9197,dy/dx=0.0001,0.0001,auprc_macro,baseline,0.0
 linear,y = 0.000000x + 0.9547,0.8312,30000.0,60000.0,1.0,60000.0,0.9633,numerical,,,no_knee,30000.0,0.959,constant,0.0001,auprc_macro,5% noise,0.05
 linear,y = 0.000000x + 0.9571,0.34,30000.0,60000.0,1.0,60000.0,0.9605,numerical,,,no_knee,30000.0,0.9588,constant,0.0001,auprc_macro,10% noise,0.1
 linear,y = -0.000000x + 0.9592,0.0185,30000.0,60000.0,0.0001,30002.0,0.9589,numerical,,,no_knee,30000.0,0.9589,constant,0.0001,auprc_macro,15% noise,0.15
@@ -44,7 +44,7 @@ linear,y = -0.000000x + 0.9585,0.1364,30000.0,60000.0,0.0001,30002.0,0.9571,nume
 linear,y = -0.000000x + 0.9604,0.4213,30000.0,60000.0,0.0001,30002.0,0.9572,numerical,,,no_knee,30000.0,0.9572,constant,0.0001,auprc_macro,30% noise,0.3
 linear,y = -0.000000x + 0.9605,0.4119,30000.0,60000.0,0.0001,30002.0,0.9562,numerical,,,no_knee,30000.0,0.9562,constant,0.0001,auprc_macro,35% noise,0.35
 linear,y = -0.000000x + 0.9597,0.4057,30000.0,60000.0,0.0001,30002.0,0.9555,numerical,,,no_knee,30000.0,0.9555,constant,0.0001,auprc_macro,40% noise,0.4
-log,y = 0.0240�log(x) + 0.6487,0.9868,3000.0,60000.0,,3001.0,0.8409,analytical,19033.03,0.8853,max_distance,3000.0,0.8409,dy/dx=0.0001,0.0001,mcc,baseline,0.0
+log,y = 0.0240·log(x) + 0.6487,0.9868,3000.0,60000.0,,3001.0,0.8409,analytical,19033.03,0.8853,max_distance,3000.0,0.8409,dy/dx=0.0001,0.0001,mcc,baseline,0.0
 linear,y = 0.000000x + 0.8894,0.7397,30000.0,60000.0,1.0,60000.0,0.9052,numerical,,,no_knee,30000.0,0.8973,constant,0.0001,mcc,5% noise,0.05
 linear,y = 0.000000x + 0.8932,0.4805,30000.0,60000.0,1.0,60000.0,0.9021,numerical,,,no_knee,30000.0,0.8977,constant,0.0001,mcc,10% noise,0.1
 linear,y = 0.000000x + 0.8945,0.3473,30000.0,60000.0,1.0,60000.0,0.9005,numerical,,,no_knee,30000.0,0.8975,constant,0.0001,mcc,15% noise,0.15
@@ -53,7 +53,7 @@ linear,y = 0.000000x + 0.8935,0.0824,30000.0,60000.0,1.0,60000.0,0.8967,numerica
 linear,y = -0.000000x + 0.8965,0.0369,30000.0,60000.0,0.0001,30002.0,0.8953,numerical,,,no_knee,30000.0,0.8953,constant,0.0001,mcc,30% noise,0.3
 linear,y = -0.000000x + 0.8935,0.0044,30000.0,60000.0,0.0001,30002.0,0.8928,numerical,,,no_knee,30000.0,0.8928,constant,0.0001,mcc,35% noise,0.35
 linear,y = -0.000000x + 0.8939,0.0184,30000.0,60000.0,0.0001,30002.0,0.8928,numerical,,,no_knee,30000.0,0.8928,constant,0.0001,mcc,40% noise,0.4
-log,y = 0.0207�log(x) + 0.6942,0.9888,3000.0,60000.0,,3001.0,0.8598,analytical,19033.03,0.898,max_distance,3000.0,0.8598,dy/dx=0.0001,0.0001,precision_macro,baseline,0.0
+log,y = 0.0207·log(x) + 0.6942,0.9888,3000.0,60000.0,,3001.0,0.8598,analytical,19033.03,0.898,max_distance,3000.0,0.8598,dy/dx=0.0001,0.0001,precision_macro,baseline,0.0
 linear,y = 0.000000x + 0.9020,0.7757,30000.0,60000.0,1.0,60000.0,0.9152,numerical,,,no_knee,30000.0,0.9086,constant,0.0001,precision_macro,5% noise,0.05
 linear,y = 0.000000x + 0.9049,0.3887,30000.0,60000.0,1.0,60000.0,0.9121,numerical,,,no_knee,30000.0,0.9085,constant,0.0001,precision_macro,10% noise,0.1
 linear,y = 0.000000x + 0.9064,0.3567,30000.0,60000.0,1.0,60000.0,0.9107,numerical,,,no_knee,30000.0,0.9086,constant,0.0001,precision_macro,15% noise,0.15
@@ -62,7 +62,7 @@ linear,y = 0.000000x + 0.9045,0.0827,30000.0,60000.0,1.0,60000.0,0.9076,numerica
 linear,y = -0.000000x + 0.9073,0.0208,30000.0,60000.0,0.0001,30002.0,0.9065,numerical,,,no_knee,30000.0,0.9065,constant,0.0001,precision_macro,30% noise,0.3
 linear,y = -0.000000x + 0.9050,0.0087,30000.0,60000.0,0.0001,30002.0,0.9042,numerical,,,no_knee,30000.0,0.9042,constant,0.0001,precision_macro,35% noise,0.35
 linear,y = -0.000000x + 0.9054,0.0324,30000.0,60000.0,0.0001,30002.0,0.9042,numerical,,,no_knee,30000.0,0.9042,constant,0.0001,precision_macro,40% noise,0.4
-log,y = 0.0218�log(x) + 0.6820,0.986,3000.0,60000.0,,3001.0,0.8563,analytical,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,recall_macro,baseline,0.0
+log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,,3001.0,0.8563,analytical,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,recall_macro,baseline,0.0
 linear,y = 0.000000x + 0.9003,0.7382,30000.0,60000.0,1.0,60000.0,0.9145,numerical,,,no_knee,30000.0,0.9074,constant,0.0001,recall_macro,5% noise,0.05
 linear,y = 0.000000x + 0.9037,0.4775,30000.0,60000.0,1.0,60000.0,0.9118,numerical,,,no_knee,30000.0,0.9077,constant,0.0001,recall_macro,10% noise,0.1
 linear,y = 0.000000x + 0.9048,0.3561,30000.0,60000.0,1.0,60000.0,0.9103,numerical,,,no_knee,30000.0,0.9076,constant,0.0001,recall_macro,15% noise,0.15
