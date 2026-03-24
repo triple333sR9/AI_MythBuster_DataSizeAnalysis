@@ -1,9 +1,9 @@
-func_type,equation,r_squared,x_min,x_max,efficiency_x,efficiency_y,efficiency_note,efficiency_ratio,knee_x,knee_y,knee_note,marginal_x,marginal_y,marginal_note,marginal_threshold,metric
-log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,3001.0,0.8563,analytical,0.00028534,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,accuracy
-log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,3001.0,0.8563,analytical,0.00028534,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,balanced_accuracy
-log,y = 0.0220·log(x) + 0.6796,0.9836,3000.0,60000.0,3001.0,0.8555,analytical,0.00028507,19033.03,0.8961,max_distance,3000.0,0.8555,dy/dx=0.0001,0.0001,f1_macro
-log,y = 0.0027·log(x) + 0.9658,0.974,3000.0,60000.0,3001.0,0.9875,analytical,0.00032907,19033.03,0.9925,max_distance,3000.0,0.9875,dy/dx=0.0001,0.0001,auroc_macro
-log,y = 0.0167·log(x) + 0.7862,0.9806,3000.0,60000.0,3001.0,0.9197,analytical,0.00030647,19033.03,0.9505,max_distance,3000.0,0.9197,dy/dx=0.0001,0.0001,auprc_macro
-log,y = 0.0240·log(x) + 0.6487,0.9868,3000.0,60000.0,3001.0,0.8409,analytical,0.00028022,19033.03,0.8853,max_distance,3000.0,0.8409,dy/dx=0.0001,0.0001,mcc
-log,y = 0.0207·log(x) + 0.6942,0.9888,3000.0,60000.0,3001.0,0.8598,analytical,0.0002865,19033.03,0.898,max_distance,3000.0,0.8598,dy/dx=0.0001,0.0001,precision_macro
-log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,3001.0,0.8563,analytical,0.00028534,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,recall_macro
+func_type,equation,r_squared,x_min,x_max,efficiency_noisy_clean_ratio,efficiency_x,efficiency_y,efficiency_note,knee_x,knee_y,knee_note,marginal_x,marginal_y,marginal_note,marginal_threshold,metric
+log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,,3001.0,0.8563,analytical,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,accuracy
+log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,,3001.0,0.8563,analytical,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,balanced_accuracy
+log,y = 0.0220·log(x) + 0.6796,0.9836,3000.0,60000.0,,3001.0,0.8555,analytical,19033.03,0.8961,max_distance,3000.0,0.8555,dy/dx=0.0001,0.0001,f1_macro
+log,y = 0.0027·log(x) + 0.9658,0.974,3000.0,60000.0,,3001.0,0.9875,analytical,19033.03,0.9925,max_distance,3000.0,0.9875,dy/dx=0.0001,0.0001,auroc_macro
+log,y = 0.0167·log(x) + 0.7862,0.9806,3000.0,60000.0,,3001.0,0.9197,analytical,19033.03,0.9505,max_distance,3000.0,0.9197,dy/dx=0.0001,0.0001,auprc_macro
+log,y = 0.0240·log(x) + 0.6487,0.9868,3000.0,60000.0,,3001.0,0.8409,analytical,19033.03,0.8853,max_distance,3000.0,0.8409,dy/dx=0.0001,0.0001,mcc
+log,y = 0.0207·log(x) + 0.6942,0.9888,3000.0,60000.0,,3001.0,0.8598,analytical,19033.03,0.898,max_distance,3000.0,0.8598,dy/dx=0.0001,0.0001,precision_macro
+log,y = 0.0218·log(x) + 0.6820,0.986,3000.0,60000.0,,3001.0,0.8563,analytical,19033.03,0.8965,max_distance,3000.0,0.8563,dy/dx=0.0001,0.0001,recall_macro

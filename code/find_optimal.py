@@ -143,7 +143,7 @@ def compute_optimal(fit: Dict, thresh: float, exp2_clean: int = None, noise_rate
     ft, p, xmin, xmax = fit["func_type"], fit["params"], fit["x_min"], fit["x_max"]
 
     row = {"func_type": ft, "equation": fit["equation"], "r_squared": round(fit["r_squared"], 4),
-           "x_min": xmin, "x_max": xmax}
+           "x_min": xmin, "x_max": xmax, "efficiency_noisy_clean_ratio": None}
 
     # Efficiency
     if exp2_clean and noise_rate and noise_rate > 0:

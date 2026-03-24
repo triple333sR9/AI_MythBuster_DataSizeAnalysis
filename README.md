@@ -14,7 +14,9 @@ the sky falling down.
 
 Whilst it is unrealistic to investigate whether there exists too much data, this study proposes an alternative. Using a 10-Class
 CNN classification model and a small set of commonly used data set in the machine learning community. The goal is to challenge the 
-assumptions conceived regarding the amount of data needed for a _good_ model.
+assumptions conceived regarding the amount of data needed for a _good_ model. This report investigates three specific representations 
+of increased data in model training. These are incrementals of clean data, incrementals of data containing noise and incrementals 
+of data mapped with respect to number of classes.
 
 ### 2. Methodology
 To emphasise the effect of increased data, all other variables are set (see config.py). This includes the
@@ -429,7 +431,7 @@ model as the amount of data provided for the training process increased.
 | log       | 0.0240·log(x) + 0.6487 | 0.9868    | 3 000 | 60 000 | 3 001        | 0.8409       | analytical        | 0.00028031       | 19033.03 | 0.8853 | max_distance | 3000       | 0.8409     | dy/dx=0.0001  | 0.0001             | mcc               |
 | log       | 0.0207·log(x) + 0.6942 | 0.9888    | 3 000 | 60 000 | 3 001        | 0.8598       | analytical        | 0.0002866        | 19033.03 | 0.8980 | max_distance | 3000       | 0.8598     | dy/dx=0.0001  | 0.0001             | precision_macro   |
 | log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical        | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | recall_macro      |
-Table (?): 
+Table (?): Summary table of optimal points for experiment 1
 
 The efficiency for all performance metrics falls at the same $x$ value of 3001 data sampless. Whilst the y-value varies, it substantially 
 illustrates the point that optimal efficiency of the performance metrics is low. The formula used in the code for this is normalised for the line of best fit.
@@ -450,17 +452,89 @@ actually calls for.
 
 #### 3.2 Increased training data contains varying amounts of noise for a 10-class CNN Results
 
+![accuracy_absolute.png](code/results/exp2/figures/accuracy_absolute.png)
+Figure (?): The effect of training data set size with varying levels of noise on model accuracy
+
+![accuracy_pct.png](code/results/exp2/figures/accuracy_pct.png)
+Figure (?): The effect of training data set size with varying levels of noise as a percentage of full data set available on model accuracy
+
+
+| func_type | equation               | r_squared | x_min | x_max  | efficiency_x | efficiency_y | efficiency_note | efficiency_ratio | knee_x   | knee_y | knee_note    | marginal_x | marginal_y | marginal_note | marginal_threshold | metric            | 
+|-----------|------------------------|-----------|-------|--------|--------------|--------------|-----------------|------------------|----------|--------|--------------|------------|------------|---------------|--------------------|-------------------|
+| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical        | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | accuracy          |
+| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical        | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | balanced_accuracy |
+| log       | 0.0220·log(x) + 0.6796 | 0.9836    | 3 000 | 60 000 | 3 001        | 0.8555       | analytical        | 0.00028516       | 19033.03 | 0.8961 | max_distance | 3000       | 0.8555     | dy/dx=0.0001  | 0.0001             | f1_macro          |
+| log       | 0.0027·log(x) + 0.9658 | 0.974     | 3 000 | 60 000 | 3 001        | 0.9875       | analytical        | 0.00032918       | 19033.03 | 0.9925 | max_distance | 3000       | 0.9875     | dy/dx=0.0001  | 0.0001             | auroc_macro       |
+| log       | 0.0167·log(x) + 0.7862 | 0.9806    | 3 000 | 60 000 | 3 001        | 0.9197       | analytical        | 0.00030657       | 19033.03 | 0.9505 | max_distance | 3000       | 0.9197     | dy/dx=0.0001  | 0.0001             | auprc_macro       |
+| log       | 0.0240·log(x) + 0.6487 | 0.9868    | 3 000 | 60 000 | 3 001        | 0.8409       | analytical        | 0.00028031       | 19033.03 | 0.8853 | max_distance | 3000       | 0.8409     | dy/dx=0.0001  | 0.0001             | mcc               |
+| log       | 0.0207·log(x) + 0.6942 | 0.9888    | 3 000 | 60 000 | 3 001        | 0.8598       | analytical        | 0.0002866        | 19033.03 | 0.8980 | max_distance | 3000       | 0.8598     | dy/dx=0.0001  | 0.0001             | precision_macro   |
+| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical        | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | recall_macro      |
+Table (?): Summary table of optimal points for experiment 2
+
 #### 3.3 Increasing amount of clean training data for a 10-class CNN Results
 
 ### 4. Discussion and Interpretation
 ...
 
 ### 5. Conclusion
-...
+In conclusion, it is typical for a model training process to attempt to use all the data available, however this does not 
+imply that all data available is needed to train a sufficiently good model. Model performance can be much closely tied to fine 
+tuning methods than to the scaling of data set size beyond a certain threshold. This diminishing returns effect becomes more 
+adversarial on model performance when measured in conjunction with added noise (see experiment 2). The difficulty of the task 
+the model is expected to perform (eg. number of classes to differentiate between) also factors into the amount of data needed (see experiment 3).
+
 
 
 ### 6. Appendix
 
+#### 6.1 Additional Figures
+
+##### 6.1.1 Experiment 1: Simple Diminishing Returns
+
+![auprc_macro_absolute.png](code/results/exp1/figures/auprc_macro_absolute.png)
+
+![auprc_macro_pct.png](code/results/exp1/figures/auprc_macro_pct.png)
+
+![auroc_macro_absolute.png](code/results/exp1/figures/auroc_macro_absolute.png)
+
+![auroc_macro_pct.png](code/results/exp1/figures/auroc_macro_pct.png)
+
+![balanced_accuracy_absolute.png](code/results/exp1/figures/balanced_accuracy_absolute.png)
+
+![balanced_accuracy_pct.png](code/results/exp1/figures/balanced_accuracy_pct.png)
+
+Since the data set is relatively balanced, the graphs for balanced accuracy is visually near identical to the non-balanced default.
+
+![f1_macro_absolute.png](code/results/exp1/figures/f1_macro_absolute.png)
+
+![f1_macro_pct.png](code/results/exp1/figures/f1_macro_pct.png)
+
+![learning_curves_absolute.png](code/results/exp1/figures/learning_curves_absolute.png)
+
+![learning_curves_pct.png](code/results/exp1/figures/learning_curves_pct.png)
+
+![marginal_gains_absolute.png](code/results/exp1/figures/marginal_gains_absolute.png)
+
+![marginal_gains_pct.png](code/results/exp1/figures/marginal_gains_pct.png)
+
+![mcc_absolute.png](code/results/exp1/figures/mcc_absolute.png)
+
+![mcc_pct.png](code/results/exp1/figures/mcc_pct.png)
+
+![precision_macro_absolute.png](code/results/exp1/figures/precision_macro_absolute.png)
+
+![precision_macro_pct.png](code/results/exp1/figures/precision_macro_pct.png)
+
+![recall_macro_absolute.png](code/results/exp1/figures/recall_macro_absolute.png)
+
+![recall_macro_pct.png](code/results/exp1/figures/recall_macro_pct.png)
+
+
+##### 6.1.2 Experiment 2: Diminishing Returns with Added Noise
+
+##### 6.1.3 Experiment 3: Diminishing Returns measured with respect to Number of Classes in Classifer Model
+
+#### 6.2 Reference LIst
 https://link.springer.com/article/10.1007/s11263-015-0812-2
 https://www.tandfonline.com/doi/abs/10.1080/01431169508954507
 https://proceedings.mlr.press/r1/oates97b.html
