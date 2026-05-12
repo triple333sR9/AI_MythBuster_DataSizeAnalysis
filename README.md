@@ -1,28 +1,22 @@
 ## Investigating whether more data is always beneficial when training machine learning models
 
 ### 1. Introduction
-This report uses an over simplistic concept of an artificial intelligence model and data usage to demostrate the effects 
-of increased data set size on the model's performance. A simple search of how much data exists currently on the world wide web 
-results in varying values and estimates, depending on wording of the question one might see ranges from over a hundread zettabytes 
-to defining petabytes, all without references for the origin of their numbers. One such claim comes from BBC, claiming that 
-"the big four store at least 1,200 petabytes between them" (Mitchell, https://www.sciencefocus.com/future-technology/how-much-data-is-on-the-internet). 
-Regardless, the illustration of the situation is clear, there is more data both in existence and being generated every second 
-than what puny little human minds can imagine. Yet much emphasis is placed on creating more data originating from the idea 
-that the industry is running out of data to train AI models on (https://theconversation.com/researchers-warn-we-could-run-out-of-data-to-train-ai-by-2026-what-then-216741). 
-Whilst this particular article is dated and did not age too well for this report, written in 2026, Big AI is still training new models without 
-the sky falling down. 
+This report uses an over simplistic concept of an artificial intelligence model and data usage to demostrate the effects of increased data set size on the model's performance. A simple search of how much data exists currently on the world wide web results in varying values and estimates, depending on wording of the question one might see ranges from over a hundread zettabytes to defining petabytes, all without references for the origin of their numbers. One such claim comes from BBC, claiming that "the big four store at least 1,200 petabytes between them" (Mitchell, https://www.sciencefocus.com/future-technology/how-much-data-is-on-the-internet). Regardless, the illustration of the situation is clear, there is more data both in existence and being generated every second than what puny little human minds can imagine. Yet much emphasis is placed on creating more data originating fro the idea that the industry is running out of data to train AI models on (https://theconversation.com/researchers-warn-we-could-run-out-of-data-to-train-ai-by-2026-what-then-216741). 
 
-Whilst it is unrealistic to investigate whether there exists too much data, this study proposes an alternative. Using a 10-Class
-CNN classification model and a small set of commonly used data set in the machine learning community. The goal is to challenge the 
-assumptions conceived regarding the amount of data needed for a _good_ model. This report investigates three specific representations 
-of increased data in model training. These are incrementals of clean data, incrementals of data containing noise and incrementals 
-of data mapped with respect to number of classes.
+Whilst this particular article is dated and did not age too well for this report, written in 2026, Big AI is still training new models without the sky falling down. The latest being Anthropic's Mythos, boasting an eye watering ....
+
+Whilst it is unrealistic to investigate whether there exists too much data, this study proposes an alternative. Using a 10-Class CNN classification model and a small set of commonly used data set in the machine learning community. The goal is to challenge the assumptions conceived regarding the amount of data needed for a _good_ model. This report investigates three specific representations of increased data in model training. These are incrementals of clean data, incrementals of data containing noise and incrementals of data mapped with respect to number of classes.
+
+The conventional approach for estimating training set size per class ($n$) defines a rule that "n should be 10$p$ to 30$p$" (Van Niel et al, 2005)where b $n$ is the number of classes and $p$ is the number of features or predictors used (ie. input columns or independent input variables that may affect the output). Van Niel et al. (2005) uses the 95% accuracy rate as benchmark to reduce the training set size and discovered that similar performance can be achieved with only "2$p$ to 4$p$" for maximum likelihood classifications. Similarly, Foody et al (2006) looked at whether there is a statistically significant(or as it were discovered, the insignificant) decrease in model performance (accuracy) when reductions were made when classifying cotton fields in India. However, given the goal was a target performance benchmark, the models and training methods also differed as training set was reduced to maintain performance. Both studies were focused on remove sensing of environments and thus farm fields, limiting the potential generalisability of the research outcomes.
+
+Tsangaratos and Ilia (2016) compared training dataset size in logistic regression and naive Bayes classifier models for landslide susceptibility assessments. The evidence of their research showed that both model types performed better with less data (in accuracy) with feature engineering and data mining involved, concluding that the curse of dimensionality can be somewhat remediated by limiting the dataset size. For complex models (in their case, the logical regression model), this must be used in conjunction with limiting the number of features used to attain the optimal result. 
+
+Oates and Jensen argues a case for decision trees whereby increase in training set size "results in a linear increase in tree size, even when additional complexity results in no significant increase in classification accuracy" (date?). 
+
+In neural networks, Foody et al. (2007) concluded that "variations in inter-class size in the training set of an artificial neural network classification could be used to weight class allocation" to an effect similar to that of _priori_ information in discriminant analysis. 
 
 ### 2. Methodology
-To emphasise the effect of increased data, all other variables are set (see config.py). This includes the
-architecture of the model which is a 3-layer CNN, a relatively generic model for image detection. Other controlled
-variables include learning rate and weight decay rate, number of epoch, batch size, early stopping patience, drop out
-level, seeds and data set.
+To emphasise the effect of increased data, all other variables are set (see config.py). This includes the architecture of the model which is a 3-layer CNN, a relatively generic model for image detection. Other controlled variables include learning rate and weight decay rate, number of epoch, batch size, early stopping patience, drop out level, seeds and data set.
 
 | Hyperparameter          | Value                                                                                                                                                                          |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +33,7 @@ level, seeds and data set.
 | Validation split        | 0.1 of training data set                                                                                                                                                       |
 | Training data set       | 60 000 images total                                                                                                                                                            |
 | Test data set           | 10 000 images total                                                                                                                                                            |
-| Data set                | Fashion-MNIST                                                                                                                                                                               |
+| Data set                | Fashion-MNIST                                                                                                                                                                  |
 
 Table ?: List of hyperparameters fixed for all experiments.
 
@@ -47,15 +41,9 @@ Each seed is considered a unique run of the experiment. Effectively, each condit
 metrics of all five are used in the conclusion. See Appendix for raw data.
 
 #### 2.1 Increasing amount of clean training data for a 10-class CNN
-The experiment randomly samples the training data using 5% to 100% of each class's training data to train the model to
-maintain class distribution. All ten classes are used and models are to predict all ten classes.
+The experiment randomly samples the training data using 5% to 100% of each class's training data to train the model to maintain class distribution. All ten classes are used and models are to predict all ten classes.
 
-The hypothesis is that increasing the amount of data will have limited effects on model performance beyond a certain threshold, thus the point
-of diminishing returns. Unlike the intuition of the scaling law which typically predicts a linear proportional relationship, 
-a model can only learn so much from the data it has due to the limits of current architecture infrastructure and thus there
-exists a point whereby a model can consume too much data with little improvement. The performance metrics should show a
-relatively substantial increase initially from the point of not enough data to an optimal point, then the increase in performance
-metrics slow drastically and perhaps even decrease due to overfitting.
+The hypothesis is that increasing the amount of data will have limited effects on model performance beyond a certain threshold, thus the point of diminishing returns. Unlike the intuition of the scaling law which typically predicts a linear proportional relationship, a model can only learn so much from the data it has due to the limits of current architecture infrastructure and thus there exists a point whereby a model can consume too much data with little improvement. The performance metrics should show a relatively substantial increase initially from the point of not enough data to an optimal point, then the increase in performance metrics slow drastically and perhaps even decrease due to overfitting.
 
 The null hypothesis is that the change in performance metrics does not substantially slow down as the data increases beyond a certain threshold.
 
@@ -83,17 +71,14 @@ The null hypothesis is that the change in performance metrics does not substanti
 | 100            | 54 000               | 6 000                  |
 Table ?: Number of images used for training and validation per pecentage.
 
-The experiment 1 script systematically samples data randomly whilst keeping the distribution of the classes, using a seed. 
-For each data size condition, a model is trained and evaluated. The result looks at the aggregation of all metrics across all models and data size conditions.
+The experiment 1 script systematically samples data randomly whilst keeping the distribution of the classes, using a seed. For each data size condition, a model is trained and evaluated. The result looks at the aggregation of all metrics across all models and data size conditions.
 
 #### 2.2 Increased training data contains varying amounts of noise for a 10-class CNN
-Models are typically considered in the context of a perfect world, with clean and clear data sets. Building on top of 
-the first experiment, this experiment explores the effect of noisy data's ratio to clean data on model performance.
+Models are typically considered in the context of a perfect world, with clean and clear data sets. Building on top of the first experiment, this experiment explores the effect of noisy data's ratio to clean data on model performance.
 
 The hypothesis is that the cleaner the data, the better the performance. Noisier data will cause model performance to decrease.
 
-The null hypothesis is that adding noisy data would not change the performance of the models significantly and the 
-results would look similar to that of experiment 1.
+The null hypothesis is that adding noisy data would not change the performance of the models significantly and the results would look similar to that of experiment 1.
 
 The 0% noisy data results came from experiment 1 to save on time and resources.
 
@@ -188,21 +173,14 @@ Table (?): Parameters specific to experiment 2 (see config.py).
 | 50                   | 30 000           | 40             | 12 000                              | 60 000     |
 Table (?): Expanded list of combinations of noise percentage to noise rates and absolute value of training data used
 
-Using the same seeds as experiment, the data is randomly sampled for the clean data set and for the noisy. A noisy data has 
-is clean data where every data point has a chance of having its labels flipped. This chance is determined by the noise rate. 
-For every row condition in table (?) above, a model was trained for each seed (total of 5) and evaluated. The results are
-an aggregate analysis of all models' metrics.
+Using the same seeds as experiment, the data is randomly sampled for the clean data set and for the noisy. A noisy data has clean data where every data point has a chance of having its labels flipped. This chance is determined by the noise rate. For every row condition in table (?) above, a model was trained for each seed (total of 5) and evaluated. The results are an aggregate analysis of all models' metrics.
 
 #### 2.3 Increased training data and its effects on differing numbers of classes for a classification CNN
-The results of experiment 1 and experiment 2 opens the question to whether the effects are the same with varying numbers of classes.
-To further control this experiment, only clean data was used to emphasise the effect of number of classes.
+The results of experiment 1 and experiment 2 opens the question to whether the effects are the same with varying numbers of classes. To further control this experiment, only clean data was used to emphasise the effect of number of classes.
 
-The hypothesis is that fewer classes to be classified by the model, the less data required. Thus, the performance metrics should show 
-better performance
+The hypothesis is that fewer classes to be classified by the model, the less data required. Thus, the performance metrics should show better performance
 
-For each number of classes, the labels are sample randomly for five combinations to account for the variation in the object itself
-and the ease of differentiating for different classes. This allows the possibility for classes that are easily differentiated to be 
-paired together with the same likelihood as classes that are difficult to differentiate, making the groupings effectively arbitrary.
+For each number of classes, the labels are sample randomly for five combinations to account for the variation in the object itself and the ease of differentiating for different classes. This allows the possibility for classes that are easily differentiated to be paired together with the same likelihood as classes that are difficult to differentiate, making the groupings effectively arbitrary.
 
 | Number of Classes | Percentage of total data per class | Total data set size |
 |-------------------|------------------------------------|---------------------|
@@ -301,8 +279,7 @@ Table (?):
 ### 3. Results
 See results folder for all graphs and JSONs files generated.
 
-The conjugate results look at where on the graph is f(x) maximised, meaning where the data most efficiently produces the 
-best results. The formulas used are as follows.
+The conjugate results look at where on the graph is f(x) maximised, meaning where the data most efficiently produces the best results. The formulas used are as follows.
 
 ##### 3.0.1 Efficiency x and Efficiency y
 Whereby metric = f(x) is given by the formula of the line of best fit, is maximised.
@@ -338,10 +315,7 @@ $$\frac{f(x)}{x} = a + \frac{b}{x}$$
 
 
 ##### 3.0.2 Knee/Elbow Point
-The knee point is defined as the point on the curve that is furthest away from the diagonal line $y=x$ in normalised space. 
-The mathematical intuition is that at small $x$, $y$ grows rapidly and due to its closeness to origin, the point does not end 
-up very far from the $y=x$ line. When the growth of $y$ finally plateaus, the graph will converge towards (1, 1). So the point at which 
-$y$ is furtherest from shows an optimal efficiency, hence the knee.
+The knee point is defined as the point on the curve that is furthest away from the diagonal line $y=x$ in normalised space. The mathematical intuition is that at small $x$, $y$ grows rapidly and due to its closeness to origin, the point does not end up very far from the $y=x$ line. When the growth of $y$ finally plateaus, the graph will converge towards (1, 1). So the point at which $y$ is furtherest from shows an optimal efficiency, hence the knee.
 
 ###### Normalization
  
@@ -367,8 +341,7 @@ $$y_{\text{knee}} = f(x_{\text{knee}})$$
 
 
 ##### 3.0.3 Marginal Threshold Point
-The marginal threshold looks at the marginal gain. Specifically, the threshold is the point where each additional 
-sample only improves accuracy by ~0.0001 (default threshold) or less.
+The marginal threshold looks at the marginal gain. Specifically, the threshold is the point where each additional sample only improves accuracy by ~0.0001 (default threshold) or less.
 
 ###### Logarithmic Curve: $f(x) = a \ln(x) + b$
  
@@ -409,8 +382,7 @@ $$y_{\text{marginal}} = a\left(x_{\text{marginal}}\right)^c + b$$
 
 
 #### 3.1 Increasing amount of clean training data for a 10-class CNN Results
-The most obvious result is that after a certain point, the increase gained by the increment of added 
-data alone no longer sufficiently improves the model's performance. All results for this experiment fcan be found under $/results/exp1$ folder. 
+The most obvious result is that after a certain point, the increase gained by the increment of added data alone no longer sufficiently improves the model's performance. All results for this experiment fcan be found under $/results/exp1$ folder. 
 
 ![accuracy_absolute.png](code/results/exp1/figures/accuracy_absolute.png)
 Figure (?): The effect of training data set size on model accuracy
@@ -418,37 +390,27 @@ Figure (?): The effect of training data set size on model accuracy
 ![accuracy_pct.png](code/results/exp1/figures/accuracy_pct.png)
 Figure (?): The effect of training data set size as a percentage of full data set available on model accuracy
 
-Both figures portraying the accuracy of the model through this experiment showed a diminishing returns effect on accuracy displayed by the 
-model as the amount of data provided for the training process increased. 
+Both figures portraying the accuracy of the model through this experiment showed a diminishing returns effect on accuracy displayed by the model as the amount of data provided for the training process increased. 
 
 | func_type | equation               | r_squared | x_min | x_max  | efficiency_x | efficiency_y | efficiency_note | efficiency_ratio | knee_x   | knee_y | knee_note    | marginal_x | marginal_y | marginal_note | marginal_threshold | metric            | 
 |-----------|------------------------|-----------|-------|--------|--------------|--------------|-----------------|------------------|----------|--------|--------------|------------|------------|---------------|--------------------|-------------------|
-| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical        | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | accuracy          |
-| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical        | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | balanced_accuracy |
-| log       | 0.0220·log(x) + 0.6796 | 0.9836    | 3 000 | 60 000 | 3 001        | 0.8555       | analytical        | 0.00028516       | 19033.03 | 0.8961 | max_distance | 3000       | 0.8555     | dy/dx=0.0001  | 0.0001             | f1_macro          |
-| log       | 0.0027·log(x) + 0.9658 | 0.974     | 3 000 | 60 000 | 3 001        | 0.9875       | analytical        | 0.00032918       | 19033.03 | 0.9925 | max_distance | 3000       | 0.9875     | dy/dx=0.0001  | 0.0001             | auroc_macro       |
-| log       | 0.0167·log(x) + 0.7862 | 0.9806    | 3 000 | 60 000 | 3 001        | 0.9197       | analytical        | 0.00030657       | 19033.03 | 0.9505 | max_distance | 3000       | 0.9197     | dy/dx=0.0001  | 0.0001             | auprc_macro       |
-| log       | 0.0240·log(x) + 0.6487 | 0.9868    | 3 000 | 60 000 | 3 001        | 0.8409       | analytical        | 0.00028031       | 19033.03 | 0.8853 | max_distance | 3000       | 0.8409     | dy/dx=0.0001  | 0.0001             | mcc               |
-| log       | 0.0207·log(x) + 0.6942 | 0.9888    | 3 000 | 60 000 | 3 001        | 0.8598       | analytical        | 0.0002866        | 19033.03 | 0.8980 | max_distance | 3000       | 0.8598     | dy/dx=0.0001  | 0.0001             | precision_macro   |
-| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical        | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | recall_macro      |
+| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical      | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | accuracy          |
+| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical      | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | balanced_accuracy |
+| log       | 0.0220·log(x) + 0.6796 | 0.9836    | 3 000 | 60 000 | 3 001        | 0.8555       | analytical      | 0.00028516       | 19033.03 | 0.8961 | max_distance | 3000       | 0.8555     | dy/dx=0.0001  | 0.0001             | f1_macro          |
+| log       | 0.0027·log(x) + 0.9658 | 0.974     | 3 000 | 60 000 | 3 001        | 0.9875       | analytical      | 0.00032918       | 19033.03 | 0.9925 | max_distance | 3000       | 0.9875     | dy/dx=0.0001  | 0.0001             | auroc_macro       |
+| log       | 0.0167·log(x) + 0.7862 | 0.9806    | 3 000 | 60 000 | 3 001        | 0.9197       | analytical      | 0.00030657       | 19033.03 | 0.9505 | max_distance | 3000       | 0.9197     | dy/dx=0.0001  | 0.0001             | auprc_macro       |
+| log       | 0.0240·log(x) + 0.6487 | 0.9868    | 3 000 | 60 000 | 3 001        | 0.8409       | analytical      | 0.00028031       | 19033.03 | 0.8853 | max_distance | 3000       | 0.8409     | dy/dx=0.0001  | 0.0001             | mcc               |
+| log       | 0.0207·log(x) + 0.6942 | 0.9888    | 3 000 | 60 000 | 3 001        | 0.8598       | analytical      | 0.0002866        | 19033.03 | 0.8980 | max_distance | 3000       | 0.8598     | dy/dx=0.0001  | 0.0001             | precision_macro   |
+| log       | 0.0218·log(x) + 0.6820 | 0.986     | 3 000 | 60 000 | 3 001        | 0.8563       | analytical      | 0.00028543       | 19033.03 | 0.8965 | max_distance | 3000       | 0.8563     | dy/dx=0.0001  | 0.0001             | recall_macro      |
 Table (?): Summary table of optimal points for experiment 1
 
-The efficiency for all performance metrics falls at the same $x$ value of 3001 data sampless. Whilst the y-value varies, it substantially 
-illustrates the point that optimal efficiency of the performance metrics is low. The formula used in the code for this is normalised for the line of best fit.
+The efficiency for all performance metrics falls at the same $x$ value of 3001 data sampless. Whilst the y-value varies, it substantially illustrates the point that optimal efficiency of the performance metrics is low. The formula used in the code for this is normalised for the line of best fit.
 
-The point for the knee shows the most divergent numbers from the other two metrics as it does not sit on the $x$ axis boundary for this experiment, 
-instead it is at $x=19,033$. This is the point that the performance metrics improvement begin to plateau to suboptimal levels.
+The point for the knee shows the most divergent numbers from the other two metrics as it does not sit on the $x$ axis boundary for this experiment, instead it is at $x=19,033$. This is the point that the performance metrics improvement begin to plateau to suboptimal levels.
 
-Marginal threshold values here are unhelpful as the line of best fit places the point at which each additional 
-sample only improves accuracy by ~0.0001 (default threshold) or less at a value smaller than the minimal dataset size tested. 
-Whilst this provides a good idea that even at 3000 data points, each additional sample's improvement to the model may be suboptimal.
+Marginal threshold values here are unhelpful as the line of best fit places the point at which each additional sample only improves accuracy by ~0.0001 (default threshold) or less at a value smaller than the minimal dataset size tested. Whilst this provides a good idea that even at 3000 data points, each additional sample's improvement to the model may be suboptimal.
 
-Interestingly, the three different measures of optimal point suggests different values at which the usage of data provides the greatest improvements 
-to the model's performance. This ranges from a value well below the initialising data set size (for efficiency), to being on the boundary (for marginal gain 
-threshold) to a value roughly midway through the tested data set (at 19,033 or 63.4%). None of the values come anywhere close to the size of the full data set provided 
-at 30, 000. This illustrates the assumption from the perspective of data set curators that perhaps too much data was provided on the assumption that a lot of data is needed. 
-For classification models, the presumed amount of data required may be much higher in the minds of humans than what the model 
-actually calls for. 
+Interestingly, the three different measures of optimal point suggests different values at which the usage of data provides the greatest improvements to the model's performance. This ranges from a value well below the initialising data set size (for efficiency), to being on the boundary (for marginal gain threshold) to a value roughly midway through the tested data set (at 19,033 or 63.4%). None of the values come anywhere close to the size of the full data set provided at 30, 000. This illustrates the assumption from the perspective of data set curators that perhaps too much data was provided on the assumption that a lot of data is needed. For classification models, the presumed amount of data required may be much higher in the minds of humans than what the model actually calls for. 
 
 #### 3.2 Increased training data contains varying amounts of noise for a 10-class CNN Results
 
@@ -536,9 +498,10 @@ Table (?): Summary table of optimal points for experiment 2
 #### 3.3 Increasing amount of clean training data for a 10-class CNN Results
 
 ![accuracy_by_class_count.png](code/results/exp3/figures/accuracy_by_class_count.png)
+Figure (?): The effect of training data set size with varying number of classes on model accuracy
 
 ![accuracy_heatmap.png](code/results/exp3/figures/accuracy_heatmap.png)
-
+Figure (?): The effect of training data set size with varying number of classes on model accuracy
 
 | func_type | equation                     | r_squared | x_min | x_max | efficiency_x | efficiency_y | efficiency_note | knee_x | knee_y  | knee_note    | marginal_x | marginal_y | marginal_note | marginal_thresh | old               | metric     | condition | num_classes |
 |-----------|------------------------------|-----------|-------|-------|--------------|--------------|-----------------|--------|---------|--------------|------------|------------|---------------|-----------------|-------------------|------------|-----------|-------------|
@@ -617,18 +580,25 @@ Table (?): Summary table of optimal points for experiment 2
 | power     | y = 0.0000·x^6.8344 + 9.9213 | 0.8837    | 2.0   | 10.0  | 2.0          | 9.9217       | numerical       | 7.48   | 13.6609 | max_distance |            |            | not_found     | 0.0001          | iso_accuracy      | 90% target |           |             |
 | log       | y = -0.0449·log(x) + 1.0203  | 0.7416    | 2.0   | 10.0  | 10.0         | 0.917        | analytical      | 10.0   | 0.917   | max_distance | 2.0        | 0.9892     | dy/dx=0.0001  | 0.0001          | scaling_law       | 50% data   |           |             |
 | log       | y = -0.0398·log(x) + 1.0186  | 0.7373    | 2.0   | 10.0  | 10.0         | 0.927        | analytical      | 10.0   | 0.927   | max_distance | 2.0        | 0.991      | dy/dx=0.0001  | 0.0001          | scaling_law       | 100% data  |           |             |
-Table (?): 
+Table (?): Summary table of optimal points for experiment 3
 
 
 ### 4. Discussion and Interpretation
-...
+
+#### 4.1 Diminishing returns effect
+Across all three experiments, the effect of diminishing returns is evident by the decrease in rate of growth on the _y_-axis of the accuracy graphs (graph ?) as well as all line graphs with similar functions. The knee or most efficient point on the graphs were calculated to either be on the lower limit border or well below it such that it was not visible on the graph, particularly in the first experiment. The tables of optimal points often do not intuitively point to a visible knee location as a result of significant usefulness decay of additional data in the larger samples. The suggested mathematical function used to map the line of best fit does not appear to urge the optimal points to more intuitive locations, despite the results displaying a variety of function types. To what extent this decay occurs would require further analysis with different methods of measuring training set size usefulness. 
+
+Over all, the accuracy achieved by even one twentieth of the full data set was high and difference in performance metrics from the best and poorest models across all variables was at most 0.1, with most graphs showing a much smaller difference. This improvement in performance comes at a risk of over-fitting which was not measured or investigated in this report. Thus, it is unknown whether the larger models were indeed more overfitted to the data and the types of images in the provided data set like AI researchers often warn of, though typically shown in the form of decreasing performance metrics. This was outside the scope of this investigation.
+
+#### 4.2 Effect of noise
+Noise in the data is always of a concern and the extent to which it can impact model performance. Experiment two was particularly interesting in the sense that the performance metric graphs show much more volatile and unpredictable results when compared to the neat and converging lines seen in experiment one and three. In the accuracy graphs of experiment two (see graphs ?), models with higher noise sometimes outperform models with lower noise. Compared to the baseline clean sample, it is clear that any amount of noise in the model would lower model performance. Without additional changes to the model architecture and the training pipeline, all noise adversely impacts model integrity.
+
+The noisy data was determined by randomly flipping class labels with a _x_% chance. This does not realistically represent noisy data in the real world, rather a very specific type of noise. Further testing is required with regard to different noise types, including but not limited to: correct label but noisy data, noise biased towards one class and incorrect labels with never before seen content.
+
+#### 4.3 Other Limitations
 
 ### 5. Conclusion
-In conclusion, it is typical for a model training process to attempt to use all the data available, however this does not 
-imply that all data available is needed to train a sufficiently good model. Model performance can be much closely tied to fine 
-tuning methods than to the scaling of data set size beyond a certain threshold. This diminishing returns effect becomes more 
-adversarial on model performance when measured in conjunction with added noise (see experiment 2). The difficulty of the task 
-the model is expected to perform (eg. number of classes to differentiate between) also factors into the amount of data needed (see experiment 3).
+In conclusion, it is typical for a model training process to attempt to use all the data available, however this does not imply that all data available is needed to train a sufficiently good model. Model performance can be much closely tied to fine-tuning methods than to the scaling of data set size beyond a certain threshold. This diminishing returns effect becomes more adversarial on model performance when measured in conjunction with added noise (see experiment 2). The difficulty of the task the model is expected to perform (e.g. number of classes to differentiate between) also factors into the amount of data needed (see experiment 3).
 
 
 
@@ -678,10 +648,73 @@ Since the data set is relatively balanced, the graphs for balanced accuracy is v
 
 
 ##### 6.1.2 Experiment 2: Diminishing Returns with Added Noise
+![auprc_macro_absolute.png](code/results/exp2/figures/auprc_macro_absolute.png)
+
+![auprc_macro_pct.png](code/results/exp2/figures/auprc_macro_pct.png)
+
+![auroc_macro_absolute.png](code/results/exp2/figures/auroc_macro_absolute.png)
+
+![auroc_macro_pct.png](code/results/exp2/figures/auroc_macro_pct.png)
+
+![balanced_accuracy_absolute.png](code/results/exp2/figures/balanced_accuracy_absolute.png)
+
+![balanced_accuracy_pct.png](code/results/exp2/figures/balanced_accuracy_pct.png)
+Since the data set is relatively balanced, the graphs for balanced accuracy is visually near identical to the non-balanced default.
+
+
+![f1_macro_absolute.png](code/results/exp2/figures/f1_macro_absolute.png)
+
+![f1_macro_pct.png](code/results/exp2/figures/f1_macro_pct.png)
+
+![mcc_absolute.png](code/results/exp2/figures/mcc_absolute.png)
+
+![mcc_pct.png](code/results/exp2/figures/mcc_pct.png)
+
+![precision_macro_absolute.png](code/results/exp2/figures/precision_macro_absolute.png)
+
+![precision_macro_pct.png](code/results/exp2/figures/precision_macro_pct.png)
+
+![recall_macro_absolute.png](code/results/exp2/figures/recall_macro_absolute.png)
+
+![recall_macro_pct.png](code/results/exp2/figures/recall_macro_pct.png)
+
 
 ##### 6.1.3 Experiment 3: Diminishing Returns measured with respect to Number of Classes in Classifer Model
 
-#### 6.2 Reference LIst
+![auprc_macro_by_class_count.png](code/results/exp3/figures/auprc_macro_by_class_count.png)
+
+![auroc_macro_by_class_count.png](code/results/exp3/figures/auroc_macro_by_class_count.png)
+
+![auroc_macro_heatmap.png](code/results/exp3/figures/auroc_macro_heatmap.png)
+
+![balanced_accuracy_by_class_count.png](code/results/exp3/figures/balanced_accuracy_by_class_count.png)
+
+![class_difficulty.png](code/results/exp3/figures/class_difficulty.png)
+
+![f1_macro_by_class_count.png](code/results/exp3/figures/f1_macro_by_class_count.png)
+
+![f1_macro_heatmap.png](code/results/exp3/figures/f1_macro_heatmap.png)
+
+![iso_accuracy_curves.png](code/results/exp3/figures/iso_accuracy_curves.png)
+
+![mcc_by_class_count.png](code/results/exp3/figures/mcc_by_class_count.png)
+
+![precision_macro_by_class_count.png](code/results/exp3/figures/precision_macro_by_class_count.png)
+
+![recall_macro_by_class_count.png](code/results/exp3/figures/recall_macro_by_class_count.png)
+
+![scaling_law_pct_50.png](code/results/exp3/figures/scaling_law_pct_50.png)
+
+![scaling_law_pct_100.png](code/results/exp3/figures/scaling_law_pct_100.png)
+
+#### 6.2 Reference List
+used:
+- van niel et al 2005
+- foody et al 2006
+- Tsangaratos and Ilia, 2016
+- Oates and Jensen (the effects of training set size on decision tree complexity)
+- foody et al 2007
+
 https://link.springer.com/article/10.1007/s11263-015-0812-2
 https://www.tandfonline.com/doi/abs/10.1080/01431169508954507
 https://proceedings.mlr.press/r1/oates97b.html
